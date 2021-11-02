@@ -21,18 +21,17 @@
 
 def two_sum(nums, target)
   x = 0
-  y = 0
   output = []
-  while x < nums.length
-    while y < nums.length
-      if x != y # 1 # 4 # 7
-        if nums[x] + nums[y] == target # 8
-          output << x
-          output << y
-        end                             # 9
-      end                               # 10
-      y += 1     # 2 # 5                # 11
-    end         # 3 # 6
+  while x < nums.length # 1
+    y = 0               # 2
+    nums.length.times do
+      if x != y # 4
+        if nums[x] + nums[y] == target # 5
+          return [x, y]
+        end             # 6
+      end               # 7
+      y += 1            # 8
+    end
     x += 1
   end
   return output
@@ -40,14 +39,14 @@ end
 
 p two_sum([3, 2, 4], 6)
 
-# 1. x = 0, y = 0
-# 2. x = 0, y = 1
-# 3. ''
-# 4. ''
-# 5. x = 0, y = 2
-# 6. ''
+# 1.
+# 2.
+# 3.
+# 4.
+# 5.
+# 6.
 # 7.
-# 8.
+# 8. x = 0, y = 1
 # 9.
 # 10.
 # 11.

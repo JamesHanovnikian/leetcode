@@ -77,6 +77,26 @@
 # Output: 13
 # Explanation: (5 from the first array + 8 from the second array)
 
+def largest_sum(array1, array2)
+  i1 = 0
+  highest_sum = array1[0] + array2[0]
+  while i1 < array1.length
+    i2 = 0
+    sum = 0
+    while i2 < array2.length
+      sum = array1[i1] + array2[i2]
+      if sum > highest_sum
+        highest_sum = sum
+      end
+      i2 += 1
+    end
+    i1 += 1
+  end
+  highest_sum
+end
+
+p largest_sum([5, 2, 1], [7, 8, 4, 1])
+
 # #6
 # Write a function that accepts two arrays of numbers, and returns an array that is the “intersection” of the two arrays, meaning an array of the numbers that are shared by the two original arrays.
 

@@ -42,6 +42,25 @@
 # Input: [1, 2, 3, 4]
 # Output: false (because there is no combination of two numbers that add up to 10)
 
+# def sum_ten(array)
+#   i1 = 0
+#   while i1 < array.length
+#     i2 = 0
+#     while i2 < array.length
+#       if i2 != i1
+#         if array[i2] + array[i1] == 10
+#           return true
+#         end
+#       end
+#       i2 += 1
+#     end
+#     i1 += 1
+#   end
+#   false
+# end
+
+# p sum_ten([1, 2, 3, 4])
+
 # #4
 # Write a function that accepts an array of numbers, and returns the largest product of any pair of numbers within a given array.
 

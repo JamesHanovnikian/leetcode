@@ -21,7 +21,6 @@
 
 def two_sum(nums, target)
   x = 0
-  output = []
   while x < nums.length # 1
     y = 0               # 2
     nums.length.times do

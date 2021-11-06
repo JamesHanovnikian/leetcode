@@ -77,25 +77,25 @@
 # Output: 13
 # Explanation: (5 from the first array + 8 from the second array)
 
-def largest_sum(array1, array2)
-  i1 = 0
-  highest_sum = array1[0] + array2[0]
-  while i1 < array1.length
-    i2 = 0
-    sum = 0
-    while i2 < array2.length
-      sum = array1[i1] + array2[i2]
-      if sum > highest_sum
-        highest_sum = sum
-      end
-      i2 += 1
-    end
-    i1 += 1
-  end
-  highest_sum
-end
+# def largest_sum(array1, array2)
+#   i1 = 0
+#   highest_sum = array1[0] + array2[0]
+#   while i1 < array1.length
+#     i2 = 0
+#     sum = 0
+#     while i2 < array2.length
+#       sum = array1[i1] + array2[i2]
+#       if sum > highest_sum
+#         highest_sum = sum
+#       end
+#       i2 += 1
+#     end
+#     i1 += 1
+#   end
+#   highest_sum
+# end
 
-p largest_sum([5, 2, 1], [7, 8, 4, 1])
+# p largest_sum([5, 2, 1], [7, 8, 4, 1])
 
 # #6
 # Write a function that accepts two arrays of numbers, and returns an array that is the “intersection” of the two arrays, meaning an array of the numbers that are shared by the two original arrays.
@@ -104,8 +104,42 @@ p largest_sum([5, 2, 1], [7, 8, 4, 1])
 # Output: [2, 4] (or [4, 2])
 # Explanation: 2 and 4 are the only values shared by both input arrays.
 
+# def intersection(array1, array2)
+#   i1 = 0
+#   intersection_array = []
+#   while i1 < array1.length
+#     i2 = 0
+#     while i2 < array2.length
+#       if array1[i1] == array2[i2]
+#         intersection_array << array1[i1]
+#       end
+#       i2 += 1
+#     end
+#     i1 += 1
+#   end
+#   intersection_array
+# end
+
+# p intersection([5, 4, 3, 2, 1], [0, 2, 4, 6])
+
 # #7
+
 # Write a function that accepts an array of numbers, and returns the first duplicate value.
 
 # Example: [5, 7, 8, 9, 8, 2, 1]
 # Output: 8 (since there are two 8’s in the array)
+
+def dup(array)
+  i = 0
+  while i < array.length
+    number_count = {}
+    if number_count[array[i]] == nil
+      number_count[array[i]] = 1
+    end
+    number_count[array[i]] += 1
+    i += 1
+  end
+  number_count
+end
+
+p dup([5, 7, 8, 9, 8, 2, 1])

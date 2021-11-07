@@ -38,16 +38,29 @@
 
 # p two_sum([3, 2, 4], 6)
 
-def two_sum(nums, target)
-  checked = {}
-  nums.each_with_index do |value, i|
-    diff = target - value
-    if checked[diff]
-      return [checked[diff], i]
-    else
-      checked[value] = i
-    end
+# def two_sum(nums, target)
+#   checked = {}
+#   nums.each_with_index do |value, i|
+#     diff = target - value
+#     if checked[diff]
+#       return [checked[diff], i]
+#     else
+#       checked[value] = i
+#     end
+#   end
+# end
+
+# p two_sum([2, 7, 11, 15], 9)
+
+def is_palindrome(x)
+  string = x.to_s
+  palindrome = string.reverse!
+  int_palindrome = palindrome.to_i
+  if x == int_palindrome
+    return true
+  else
+    return false
   end
 end
 
-p two_sum([2, 7, 11, 15], 9)
+p is_palindrome(1211212)

@@ -52,15 +52,35 @@
 
 # p two_sum([2, 7, 11, 15], 9)
 
-def is_palindrome(x)
-  string = x.to_s
-  palindrome = string.reverse!
-  int_palindrome = palindrome.to_i
-  if x == int_palindrome
-    return true
-  else
-    return false
+# def is_palindrome(x)
+#   string = x.to_s
+#   palindrome = string.reverse!
+#   int_palindrome = palindrome.to_i
+#   if x == int_palindrome
+#     return true
+#   else
+#     return false
+#   end
+# end
+
+# p is_palindrome(1211212)
+
+def single_number(nums)
+  nums_count = {}
+  i = 0
+  while i < nums.length
+    num = nums[i]
+    if nums_count[num] == nil
+      nums_count[num] = 0
+    end
+    nums_count[num] += 1
+    i += 1
+  end
+  nums_count.each do |k, v|
+    if v == 1
+      return k
+    end
   end
 end
 
-p is_palindrome(1211212)
+p single_number([4, 1, 2, 1, 2])

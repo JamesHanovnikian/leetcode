@@ -129,17 +129,18 @@
 # Example: [5, 7, 8, 9, 8, 2, 1]
 # Output: 8 (since there are two 8’s in the array)
 
-def dup(array)
-  i = 0
-  while i < array.length
-    number_count = {}
-    if number_count[array[i]] == nil
-      number_count[array[i]] = 1
-    end
-    number_count[array[i]] += 1
-    i += 1
-  end
-  number_count
-end
+# def dup(array)
+#   i = 0
+#   while i < array.length
+#     number_count = {}
+#     num = array[i]
+#     if number_count[num] == nil
+#       number_count[num] = 0
+#     end
+#     number_count[num] += 1
+#     i += 1
+#   end
+#   number_count
+# end
 
-p dup([5, 7, 8, 9, 8, 2, 1])
+# p dup([5, 7, 8, 9, 8, 2, 1])

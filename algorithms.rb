@@ -65,22 +65,22 @@
 
 # p is_palindrome(1211212)
 
-def single_number(nums)
-  nums_count = {}
-  i = 0
-  while i < nums.length
-    num = nums[i]
-    if nums_count[num] == nil
-      nums_count[num] = 0
-    end
-    nums_count[num] += 1
-    i += 1
-  end
-  nums_count.each do |k, v|
-    if v == 1
-      return k
-    end
-  end
-end
+# def single_number(nums)
+#   nums_count = {}
+#   i = 0
+#   while i < nums.length
+#     num = nums[i]
+#     if nums_count[num] == nil
+#       nums_count[num] = 0
+#     end
+#     nums_count[num] += 1
+#     i += 1
+#   end
+#   nums_count.each do |k, v|
+#     if v == 1
+#       return k
+#     end
+#   end
+# end
 
-p single_number([4, 1, 2, 1, 2])
+# p single_number([4, 1, 2, 1, 2])

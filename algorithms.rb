@@ -84,3 +84,26 @@
 # end
 
 # p single_number([4, 1, 2, 1, 2])
+
+def contains_duplicate(nums)
+  nums_counter = {}
+    is_true = false 
+    nums.each do |num|
+        if nums_counter[num] == nil 
+            nums_counter[num] = 0 
+        end
+        nums_counter[num] += 1 
+    end
+    
+    nums_counter.each do |k, v|
+        if v >= 2
+            is_true = true 
+            break
+        elsif v == 1 
+            is_true = false 
+        end 
+    end 
+    return is_true
+end
+
+p contains_duplicate([1, 2, 3, 1])

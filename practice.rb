@@ -227,3 +227,74 @@ votes = ["Gutierrez", "Johnson", "Johnson", "Johnson", "Gutierrez", "Johnson", "
 # Example:
 # Input: [8, 23, 0, 44, 1980, 3]
 # Output: [8, 0, 3]
+
+# public int majorityElement(int[] nums) {
+
+#   int majorElem=nums[0];
+
+#   int count=1;
+
+#   for(int i=1;i<nums.length;i++){
+
+#       if(count==0){
+#           majorElem=nums[i];
+#       }
+
+#       if(nums[i]==majorElem){
+
+#           count++;
+#       }
+#       else{
+#           count--;
+#       }
+#   }
+
+#   return majorElem;
+
+# }
+#1
+# Write a function that accepts a hash table and returns an array containing all the keys and values as a simple list. Like this:
+# Input: {"a": 1, "b": 2, "c": 3, "d": 4}
+# Output: ["a", 1, "b", 2, "c", 3, "d", 4]
+
+# def list(hash_table)
+#   simple_list = []
+#   hash_table.each do |k, v|
+#     simple_list << k
+#     simple_list << v
+#   end
+#   simple_list
+# end
+
+# p list({ "a": 1, "b": 2, "c": 3, "d": 4 })
+
+# #2
+# Write a function that accepts a hash table and returns an array of subarrays, where each subarray contains the key and value of each pair.
+# Input: {"chair": 100, "book": 14, "sofa": 55}
+# Output: [ ["chair", 100], ["book", 14], ["sofa", 55] ]
+
+# def subarrays(hash_table)
+#   output = []
+#   hash_table.each do |item|
+#     output << item
+#   end
+#   output
+# end
+
+# p subarrays({ "chair": 100, "book": 14, "sofa": 55 })
+
+#3
+# Let's do the inverse of the previous exercise. Write a function that accepts an array of subarrays, and return a hash table - in this format:
+# Input: [ [1, 3], [8, 9], [2, 16] ]
+# Output: becomes {1: 3, 8: 9, 2: 16}
+
+# def return_hash(array)
+#   output = {}
+#   array.each do |k, v|
+#     output[k] = v
+#   end
+#   output
+# end
+
+# p return_hash([[1, 3], [8, 9], [2, 16]])
+

@@ -85,25 +85,29 @@
 
 # p single_number([4, 1, 2, 1, 2])
 
-def contains_duplicate(nums)
-  nums_counter = {}
-    is_true = false 
-    nums.each do |num|
-        if nums_counter[num] == nil 
-            nums_counter[num] = 0 
-        end
-        nums_counter[num] += 1 
-    end
-    
-    nums_counter.each do |k, v|
-        if v >= 2
-            is_true = true 
-            break
-        elsif v == 1 
-            is_true = false 
-        end 
-    end 
-    return is_true
-end
+# def contains_duplicate(nums)
+#   nums_counter = {}
+#   nums.each do |num|
+#     if nums_counter[num]
+#       return true
+#     else
+#       nums_counter[num] = true
+#     end
+#   end
+#   false
+# end
 
-p contains_duplicate([1, 2, 3, 1])
+# p contains_duplicate([6, 2, 3, 5, 20, 20])
+
+# Length of last word
+
+# Given a string s consisting of some words separated by some number of spaces, return the length of the last word in the string.
+
+# A word is a maximal substring consisting of non-space characters only
+
+# def length_of_last_word(s)
+#   s = s.split(" ")
+#   return s[-1].length
+# end
+
+# p length_of_last_word("Hello World")

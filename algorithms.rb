@@ -111,3 +111,65 @@
 # end
 
 # p length_of_last_word("Hello World")
+
+# def merge_two_lists(l1, l2)
+#   output = l1 + l2
+#   output.sort
+# end
+
+# p merge_two_lists([1, 2, 4], [1, 3, 4])
+
+# def rotate(nums)
+#   i = 0
+#   while i <= nums.length
+#     if nums[i] == 0
+#       nums.insert(-1, nums[i])
+#       nums.delete_at(i)
+#     end
+#     i += 1
+#   end
+#   return nums
+# end
+
+# p rotate([0, 0, 1])
+
+# def intersect(nums1, nums2)
+#   new_array = []
+#   intersection = {}
+#   intersection2 = {}
+#   i = 0
+#   while i < nums1.length
+#     if intersection[nums1[i]] == nil
+#       intersection[nums1[i]] = 0
+#     end
+#     intersection[nums1[i]] += 1
+#     i += 1
+#   end
+#   j = 0
+#   while j < nums2.length
+#     if intersection2[nums2[j]] == nil
+#       intersection2[nums2[j]] = 0
+#     end
+#     intersection2[nums2[j]] += 1
+#     j += 1
+#   end
+#   intersection.each do |k, v|
+#     if intersection2[k]
+#       if v == 1
+#         new_array << k
+#       end
+#     end
+#   end
+#   p intersection
+#   p intersection2
+#   new_array
+# end
+
+# p intersect(([4, 9, 5]), ([9, 4, 9, 8, 4]))
+
+# def rotate(nums, k)
+#   k.times do
+#       nums.insert(0, nums[-1])
+#       nums.delete_at(nums.length - 1)
+#   end
+# end

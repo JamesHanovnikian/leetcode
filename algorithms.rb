@@ -167,9 +167,42 @@
 
 # p intersect(([4, 9, 5]), ([9, 4, 9, 8, 4]))
 
+# // Given an array, rotate the array to the right by k steps, where k is non-negative.
+
+# reverse the array
+
 # def rotate(nums, k)
-#   k.times do
-#       nums.insert(0, nums[-1])
-#       nums.delete_at(nums.length - 1)
-#   end
+#   nums.reverse!
+#   nums.each_slice(3).map { |x| x.sort() }
 # end
+
+# p rotate([1, 2, 3, 4, 5, 6, 7], 3)
+
+#  Remove Duplicates In Place problem.
+
+# def remove_duplicates(nums)
+#   #  create a variable for the current iteration in the array
+#   i = 1
+#   last_unique = nums[0]
+#   count = 2
+#   while i < nums.length
+#     if last_unique == nums[i]
+#       nums.insert(-1, nums.delete_at(nums.index(nums[i])))
+#     else
+#       last_unique = nums[i]
+#       count += 1
+#     end
+#     i += 1
+#   end
+#   nums[0, count] = nums[0, count].sort!
+#   return count
+
+# create a variable for the last unique element.
+# While Loop through.
+# if unique element is equal to current iteration, push the current iteration to the end of the array.
+# Else add one to the unique elements count, and change the unique element variable with the current iteration and keep going through.
+# Return the count, and the array, it should have everything pushed to the end of it.
+
+# end
+
+# p remove_duplicates([1, 1, 2])

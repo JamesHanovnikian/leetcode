@@ -298,3 +298,144 @@ votes = ["Gutierrez", "Johnson", "Johnson", "Johnson", "Gutierrez", "Johnson", "
 
 # p return_hash([[1, 3], [8, 9], [2, 16]])
 
+#9
+# Write a function that accepts a string and returns a hash table displaying the frequency of each character.
+
+# Example:
+# Input: "abcdbcabcdcbaz"
+# Output: {"a": 3, "b": 4, "c", 4, "d": 2, "z": 1}
+
+# def letter_frequency(string)
+#   letter_frequency = {}
+#   split_string = string.chars()
+#   split_string.each do |letter|
+#     if letter_frequency[letter] == nil
+#       letter_frequency[letter] = 0
+#     end
+#     letter_frequency[letter] += 1
+#   end
+#   letter_frequency
+# end
+
+# p letter_frequency("abcdbcabcdcbaz")
+
+#10
+# Write a function that accepts a hash table of political candidates and their number of votes and return the candidate with the most votes.
+
+# Example:
+# Input: {"Gutierrez": 954, "Johnson": 1005, "Warren": 333, "Bloomberg": 5}
+# Output: "Johnson"
+
+# def highest_votes(hash)
+#   highest_number = hash[:Gutierrez]
+#   hash.each do |k, v|
+#     if v > highest_number
+#       highest_number = v
+#     end
+#   end
+#   return hash.key(highest_number)
+# end
+
+# p highest_votes({ "Gutierrez": 954, "Johnson": 1005, "Warren": 333, "Bloomberg": 5 })
+
+# #8
+# Write a function that accepts a string and returns a hash table of how many of each character there are:
+# Input: "bookkeeper"
+# Output: {"b" => 1, "o" => 2, "k" => 2, "e" => 3, "p" => 1, "r" => 1}
+
+# def letter_count(string)
+#   split_string = string.chars()
+#   letter_frequency = {}
+#   split_string.each do |letter|
+#     if letter_frequency[letter] == nil
+#       letter_frequency[letter] = 0
+#     end
+#     letter_frequency[letter] += 1
+#   end
+#   letter_frequency
+# end
+
+# p letter_count("bookkeeper")
+
+# #9
+# Write a function that accepts an array of books and returns a hash table of how many times each author occurs:
+# Input: [ {title: "Great Book", author: "John Smith"}, {title: "1984", author: "George Orwell"}, {title: "Awesome Book", author: "John Smith"} ]
+# Output: {"John Smith" => 2, "George Orwell" => 1}
+
+# def author_count(array)
+#   hash_table = {}
+#   array.each do |book|
+#     author = book[:author]
+#     if hash_table[author] == nil
+#       hash_table[author] = 0
+#     end
+#     hash_table[author] += 1
+#   end
+#   hash_table
+# end
+
+# p author_count([{ title: "Great Book", author: "John Smith" }, { title: "1984", author: "George Orwell" }, { title: "Awesome Book", author: "John Smith" }])
+
+# #10
+# Write a function that accepts an array of books and returns a hash table where the author is the key, and an array of their book titles are the values
+# Input: [ {title: "Great Book", author: "John Smith"}, {title: "1984", author: "George Orwell"}, {title: "Awesome Book", author: "John Smith"} ]
+# Output: { "John Smith": ["Great Book, "Awesome Book"], "George Orwell": ["1984"] }
+
+# p author([{ title: "Great Book", author: "John Smith" }, { title: "1984", author: "George Orwell" }, { title: "Awesome Book", author: "John Smith" }])
+
+#7
+# Write a function that accepts an array of numbers, and returns the first duplicate value.
+
+# Example: [5, 7, 8, 9, 8, 2, 1]
+# Output: 8 (since there are two 8’s in the array)
+
+# def duplicate_value(array)
+#   counter = {}
+#   array.each do |num|
+#     if counter[num] == nil
+#       counter[num] = 0
+#     else
+#       return num
+#     end
+#   end
+# end
+
+# p duplicate_value([5, 7, 8, 9, 8, 2, 1])
+
+# Supply
+# Hashes
+# (In these exercises, hashes are referred to as hash tables. In Ruby, they’re simply called hashes, and in JavaScript, they’re known as objects.
+
+# #1
+# The following hash table represents a particular person: { firstName: "Ada", lastName: "Lovelace", email: "ada.lovelace@email.com" }
+# Write a function that accepts this type of hash table and returns the person's email address.
+
+# def email(hash_table)
+#   hash_table[:email]
+# end
+
+# p email({ firstName: "Ada", lastName: "Lovelace", email: "ada.lovelace@email.com" })
+
+# Example:
+# Input: { firstName: "Ada", lastName: "Lovelace", email: "ada.lovelace@email.com" }
+# Output: "ada.lovelace@email.com"
+
+# #2
+# The following hash table represents the inventory of shirts for a clothing store: { red: 500, blue: 615, green: 484, yellow: 332 }
+# Write a function that accepts a hash table like this and adds 200 shirts to the "yellow" category. The function can then return the updated hash table.
+
+# def shirts(hash_table)
+#   hash_table[:yellow] = hash_table[:yellow] + 200
+#   hash_table
+# end
+
+# p shirts({ red: 500, blue: 615, green: 484, yellow: 332 })
+
+
+# #3
+# The following hash table represents the inventory of shirts for a clothing store: { red: 500, blue: 615, green: 484, yellow: 332 } (same as previous exercise)
+# Write a function that accepts 3 parameters: The hash table, a string representing a brand new color, and a number of how many new color shirts there are. The function should then add this color and its number to the hash table, and then return the updated hash table.
+
+# #4
+# The following hash table rep  resents the inventory of shirts for a clothing store: { red: 500, blue: 615, green: 484, yellow: 332 } (same as previous exercise)
+# Write a function that accepts a hash table like this and returns the total number of shirts in inventory.

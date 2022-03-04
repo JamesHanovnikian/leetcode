@@ -282,3 +282,12 @@
 //   return newHash;
 // }
 // console.log(authorCounter([{ title: "Great Book", author: "John Smith" }, { title: "1984", author: "George Orwell" }, { title: "Awesome Book", author: "John Smith" }]));
+
+// Given an array, rotate the array to the right by k steps, where k is non-negative.
+
+
+def rotate(nums, k)
+
+
+end
+

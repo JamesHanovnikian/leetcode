@@ -206,3 +206,21 @@
 # end
 
 # p remove_duplicates([1, 1, 2])
+
+# def max_profit(prices)
+#   l = 0
+#   r = 1
+#   max_profit = 0
+#   while r < prices.length
+#       if prices[r] <= prices[l]
+#           l = r
+#           r += 1
+#       else
+#           if prices[r] - prices[l] > max_profit
+#               max_profit = prices[r] - prices[l]
+#           end
+#           r += 1
+#       end
+#   end
+#   max_profit
+# end

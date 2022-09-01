@@ -239,3 +239,19 @@
 #   end
 #   return prefix
 # end
+
+# def longest_common_prefix(strs)
+#   #    Start on strs[0]
+#   i = 0
+#   output = ""
+#   while i < strs[0].length
+#       for s in strs do
+#           if i == s.length || s[i] != strs[0][i]
+#               return output
+#           end
+#       end
+#       output = output + strs[0][i]
+#       i += 1
+#   end
+#   output
+# end

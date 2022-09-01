@@ -224,3 +224,18 @@
 #   end
 #   max_profit
 # end
+
+# def common_prefix(array)
+#   if array.length == 0
+#     return ""
+#   end
+#   prefix = array[0]
+#   i = 1
+#   while i < array.length
+#     while array[i].index(prefix) != 0
+#       prefix = prefix.chop
+#     end
+#     i += 1
+#   end
+#   return prefix
+# end

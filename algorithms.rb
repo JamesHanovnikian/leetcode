@@ -257,17 +257,18 @@
 # end
 
 # def is_palindrome(s)
-#   s = s.gsub(/[(,|:|[\s,])]/ ,"")
 #   s.downcase!
-#    palindrome = ""
-#    i = s.length-1
-#    while i >= 0
-#        palindrome = palindrome + s[i]
-#        i = i -1
-#    end
-#    if palindrome == s
-#        return true
-#    else
-#        return false
-#    end
+#  s = s.gsub(/[([^0-9a-z]|[\s,]|)]/ ,"")
+#   palindrome = ""
+#   i = s.length-1
+#   while i >= 0
+#       palindrome = palindrome + s[i]
+#       i = i -1
+#   end
+#   s
+#   if palindrome == s
+#       return true
+#   else
+#       return false
+#   end
 # end

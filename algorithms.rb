@@ -255,3 +255,19 @@
 #   end
 #   output
 # end
+
+# def is_palindrome(s)
+#   s = s.gsub(/[(,|:|[\s,])]/ ,"")
+#   s.downcase!
+#    palindrome = ""
+#    i = s.length-1
+#    while i >= 0
+#        palindrome = palindrome + s[i]
+#        i = i -1
+#    end
+#    if palindrome == s
+#        return true
+#    else
+#        return false
+#    end
+# end

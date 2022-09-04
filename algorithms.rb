@@ -273,38 +273,61 @@
 #   end
 # end
 
-def valid_palindrome(s)
-  i = s.length - 1
-  checker = ""
-  while i >= 0
-    checker = checker + s[i]
-    i = i - 1
-  end
-  if checker == s
-    return true
-  end
-  l = 0
-  r = s.length - 1
-  while l < r
-    if s[l] != s[r]
-      skip_l = ""
-      skip_r = ""
-      i = 0
-      while i < s.length
-        if i != l
-          skip_l = skip_l + s[i]
-        end
-        if i != r
-          skip_r = skip_r + s[i]
-        end
-        i += 1
-      end
-      if skip_l == skip_l.reverse || skip_r == skip_r.reverse
-        return true
-      end
-    end
-    l += 1
-    r = r - 1
-  end
-  return false
-end
+# def valid_palindrome(s)
+#   i = s.length - 1
+#   checker = ""
+#   while i >= 0
+#     checker = checker + s[i]
+#     i = i - 1
+#   end
+#   if checker == s
+#     return true
+#   end
+#   l = 0
+#   r = s.length - 1
+#   while l < r
+#     if s[l] != s[r]
+#       skip_l = ""
+#       skip_r = ""
+#       i = 0
+#       while i < s.length
+#         if i != l
+#           skip_l = skip_l + s[i]
+#         end
+#         if i != r
+#           skip_r = skip_r + s[i]
+#         end
+#         i += 1
+#       end
+#       if skip_l == skip_l.reverse || skip_r == skip_r.reverse
+#         return true
+#       end
+#     end
+#     l += 1
+#     r = r - 1
+#   end
+#   return false
+# end
+
+# def is_happy(n)
+#   #   create a hash holding all of the n's
+#   #     if n == 1 --> Return True!
+#   hash = {}
+#   while hash[n] == nil
+#       hash[n] = true
+#       string = n.to_s.split("")
+#       sum = 0
+#       integer = 0
+#       string.each do |num|
+#           integer = num.to_i
+#           sum =  sum + (integer * integer)
+#       end
+#       n = sum
+
+#       if n == 1
+#           return true
+#       end
+
+#   end
+#   return false
+# end

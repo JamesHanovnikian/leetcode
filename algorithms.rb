@@ -331,3 +331,19 @@
 #   end
 #   return false
 # end
+
+# def search_insert(nums, target)
+#     hash = {}
+#     nums.each_with_index do |num, index|
+#         if hash[target] == nil && num > target
+#             return index
+#         else
+#             hash[num] = index
+#         end
+#     end
+#     if hash[target] != nil
+#         return hash[target]
+#     else
+#         return nums.length
+#     end
+# end

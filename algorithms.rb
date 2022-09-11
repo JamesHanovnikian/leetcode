@@ -347,3 +347,15 @@
 #         return nums.length
 #     end
 # end
+
+# def contains_nearby_duplicate(nums, k)
+#   hash = {}
+#   nums.each_with_index do |num, index|
+#       if hash[num] != nil && (index -hash[num]) <= k
+#           return true
+#       else
+#           hash[num] = index
+#       end
+#   end
+#   return false
+# end

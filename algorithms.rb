@@ -374,3 +374,18 @@
 #         return nums[nums.length-1]
 #     end
 # end
+
+# def intersection(nums1, nums2)
+#     intersection_array = []
+#     hash = {}
+#     nums1.each do |num|
+#         hash[num] = "checked"
+#     end
+#     nums2 = nums2.uniq
+#     nums2.each do |num|
+#         if hash[num]
+#             intersection_array << num
+#         end
+#     end
+#     intersection_array
+# end

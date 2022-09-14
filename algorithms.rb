@@ -409,3 +409,18 @@
 #   end
 #  return s.to_i
 # end
+
+# def missing_number(nums)
+#   n = nums.length
+#   nums = nums.sort
+#   hash = {}
+#   range = (0..n).to_a
+#   nums.each do |number|
+#       hash[number] = true
+#   end
+#   range.each do |num|
+#       if hash[num] == nil
+#           return num
+#       end
+#   end
+# end

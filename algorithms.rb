@@ -360,29 +360,17 @@
 #   return false
 # end
 
-def roman_to_int(s)
-  roman_numerals = { "I" => 1, "V" => 5, "X" => 10, "L" => 50, "C" => 100, "D" => 500, "M" => 1000, "IV" => 4, "XL" => 40, "XC" => 90, "CD" => 400, "CM" => 900, "IX" => 9 }
+# def roman_to_int(s)
+#   roman_numerals = { "I" => 1, "V" => 5, "X" => 10, "L" => 50, "C" => 100, "D" => 500, "M" => 1000, "IV" => 4, "XL" => 40, "XC" => 90, "CD" => 400, "CM" => 900, "IX" => 9 }
 
-  digits = 0
-  array = s.split("")
-  x = 0
-  y = 1
-  while x < array.length
-    if array[y] != nil
-      combined = array[x] + array[y]
-    else
-      digits = digits + roman_numerals[array[x]]
-      break
-    end
-    if roman_numerals[combined] == nil
-      digits = digits + roman_numerals[array[x]]
-      x = y
-      y += 1
-    else
-      digits = digits += roman_numerals[combined]
-      x += 2
-      y = x + 1
-    end
-  end
-  digits
-end
+# require 'set'
+# def third_max(nums)
+#      nums = nums.uniq
+#      nums.sort!
+
+#     if nums[nums.length-3] != nil
+#         third_max = nums[nums.length-3]
+#     else
+#         return nums[nums.length-1]
+#     end
+# end

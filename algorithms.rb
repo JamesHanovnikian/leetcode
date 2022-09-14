@@ -389,3 +389,23 @@
 #     end
 #     intersection_array
 # end
+
+# def add_digits(num)
+#   s = num.to_s
+
+#   if s.length == 1
+#       return s.to_i
+#   end
+
+#   while s.length > 1
+#       a = s.split("")
+#       i = 0
+#       sum = 0
+#       while i < a.length
+#           sum = sum + a[i].to_i
+#           i += 1
+#       end
+#       s = sum.to_s
+#   end
+#  return s.to_i
+# end

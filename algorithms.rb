@@ -424,3 +424,25 @@
 #       end
 #   end
 # end
+
+# def find_the_difference(s, t)
+#   s = s.split("")
+#   hash = {}
+#   s.each do |char|
+#       if hash[char] == nil
+#          hash[char] = 0
+#       end
+#       hash[char] += 1
+#   end
+#   t = t.split("")
+# #     loop through the second array. If i've seen it, decrement by one.
+#  t.each do |char|
+#      if hash[char] == nil
+#          return char
+#      elsif hash[char] > 0
+#          hash[char] = hash[char] -1
+#      elsif hash[char] == 0
+#           return char
+#      end
+#  end
+# end

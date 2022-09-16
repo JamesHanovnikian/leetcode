@@ -446,3 +446,32 @@
 #      end
 #  end
 # end
+
+# def can_construct(ransom_note, magazine)
+#   #     Create a hash map for magazine with the count.
+#   #     Loop through ransom_note, decrement if I see the same letter from magazine.
+
+#   hash = {}
+#   i = 0
+#   while i < magazine.length
+#       char = magazine[i]
+#       if hash[char] == nil
+#           hash[char] = 0
+#       end
+#       hash[char] += 1
+#       i += 1
+#   end
+#   j = 0
+#   while j < ransom_note.length
+#       char = ransom_note[j]
+#       if hash[char] == nil
+#           return false
+#       elsif hash[char] > 0
+#           hash[char] = hash[char] -1
+#       elsif hash[char] == 0
+#           return false
+#       end
+#       j += 1
+#   end
+#   return true
+# end

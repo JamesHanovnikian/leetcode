@@ -475,3 +475,20 @@
 #   end
 #   return true
 # end
+
+# def is_subsequence(s, t)
+#   subsequence = 0
+#   t = t.split("")
+#   i = 0
+#   while i < t.length
+#       if s[subsequence] == t[i]
+#           subsequence += 1
+#       end
+#       i += 1
+#   end
+#   if subsequence == s.length
+#       return true
+#   else
+#       return false
+#   end
+# end

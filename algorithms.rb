@@ -492,3 +492,13 @@
 #       return false
 #   end
 # end
+
+# def distribute_candies(candy_type)
+#   candies = candy_type.length / 2
+#   different_candies = candy_type.uniq
+#   if candies <= different_candies.length
+#     return candies
+#   elsif different_candies.length < candies
+#     return different_candies.length
+#   end
+# end

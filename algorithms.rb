@@ -502,3 +502,34 @@
 #     return different_candies.length
 #   end
 # end
+
+def cal_points(ops)
+  #     declare a score empty array?
+  #     add the score array up at the end.
+  score_array = []
+  i = 0
+  while i < ops.length
+    if ops[i].match?(/\d/)
+      score_array << ops[i]
+    elsif ops[i] == "+"
+      if score_array.length >= 2
+        sum = 0
+        sum = score_array[score_array.length - 1].to_i + score_array[score_array.length - 2].to_i
+        score_array << sum.to_s
+      end
+    elsif ops[i] == "D"
+      last = score_array[score_array.length - 1]
+      last = last.to_i
+      score_array << (last + last).to_s
+    elsif ops[i] == "C"
+      last = score_array[score_array.length - 1]
+      score_array.delete_at(score_array.length - 1)
+    end
+    i += 1
+  end
+  total = 0
+  score_array.each do |score|
+    total = total + score.to_i
+  end
+  total
+end

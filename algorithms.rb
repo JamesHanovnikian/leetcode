@@ -503,33 +503,57 @@
 #   end
 # end
 
-def cal_points(ops)
-  #     declare a score empty array?
-  #     add the score array up at the end.
-  score_array = []
-  i = 0
-  while i < ops.length
-    if ops[i].match?(/\d/)
-      score_array << ops[i]
-    elsif ops[i] == "+"
-      if score_array.length >= 2
-        sum = 0
-        sum = score_array[score_array.length - 1].to_i + score_array[score_array.length - 2].to_i
-        score_array << sum.to_s
-      end
-    elsif ops[i] == "D"
-      last = score_array[score_array.length - 1]
-      last = last.to_i
-      score_array << (last + last).to_s
-    elsif ops[i] == "C"
-      last = score_array[score_array.length - 1]
-      score_array.delete_at(score_array.length - 1)
-    end
-    i += 1
-  end
-  total = 0
-  score_array.each do |score|
-    total = total + score.to_i
-  end
-  total
-end
+# def cal_points(ops)
+#   #     declare a score empty array?
+#   #     add the score array up at the end.
+#   score_array = []
+#   i = 0
+#   while i < ops.length
+#     if ops[i].match?(/\d/)
+#       score_array << ops[i]
+#     elsif ops[i] == "+"
+#       if score_array.length >= 2
+#         sum = 0
+#         sum = score_array[score_array.length - 1].to_i + score_array[score_array.length - 2].to_i
+#         score_array << sum.to_s
+#       end
+#     elsif ops[i] == "D"
+#       last = score_array[score_array.length - 1]
+#       last = last.to_i
+#       score_array << (last + last).to_s
+#     elsif ops[i] == "C"
+#       last = score_array[score_array.length - 1]
+#       score_array.delete_at(score_array.length - 1)
+#     end
+#     i += 1
+#   end
+#   total = 0
+#   score_array.each do |score|
+#     total = total + score.to_i
+#   end
+#   total
+# end
+
+# def judge_circle(moves)
+#   x = 0
+#   y = 0
+#   i = 0
+#   while i < moves.length
+#     if moves[i] == "U"
+#       y += 1
+#     elsif moves[i] == "D"
+#       y = y - 1
+#     elsif moves[i] == "L"
+#       x = x - 1
+#     elsif moves[i] == "R"
+#       x += 1
+#     end
+#     i += 1
+#   end
+
+#   if x == 0 && y == 0
+#     return true
+#   else
+#     return false
+#   end
+# end

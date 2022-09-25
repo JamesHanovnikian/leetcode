@@ -575,3 +575,20 @@
 #   end
 #    return answer
 # end
+
+# def sort_array_by_parity(nums)
+#   sorted = [0] * nums.length
+
+#   even = 0
+#   odd = nums.length - 1
+#   nums.each do |num|
+#       if num % 2 == 0
+#           sorted[even] = num
+#           even += 1
+#       else
+#           sorted[odd] = num
+#           odd = odd - 1
+#       end
+#   end
+#   sorted
+# end

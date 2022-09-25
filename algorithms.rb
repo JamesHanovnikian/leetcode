@@ -557,3 +557,21 @@
 #     return false
 #   end
 # end
+
+# def sort_array_by_parity_ii(nums)
+#   answer = [0] * nums.length
+
+#   even = 0
+#   odd = 1
+
+#   nums.each do |num|
+#       if num % 2 == 0
+#           answer[even] = num
+#           even += 2
+#       else
+#           answer[odd] = num
+#           odd += 2
+#       end
+#   end
+#    return answer
+# end

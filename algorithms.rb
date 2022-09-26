@@ -648,3 +648,20 @@
 #   end
 #   answer
 # end
+
+# def check_if_exist(arr)
+#   i = 0
+#   while i < arr.length
+#       j = 0
+#       while j < arr.length
+#           if i != j
+#               if arr[i] * 2 == arr[j]
+#                   return true
+#               end
+#           end
+#           j += 1
+#       end
+#       i += 1
+#   end
+#   false
+# end

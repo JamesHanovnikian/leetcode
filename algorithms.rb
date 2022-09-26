@@ -665,3 +665,29 @@
 #   end
 #   false
 # end
+
+# def find_final_value(nums, original)
+#   # find original, mult by 2 and reassign original
+#   #  while loop going indefinitely. --> break if you can't find orginal!
+#   #     return original
+#   #
+
+#   loop do
+#       contains_original = "false"
+#       product = 0
+#       nums.each do |num|
+#           if num == original
+#               product =  num * 2
+#               contains_original = "true"
+#               break
+#           else
+#               contains_original = "false"
+#           end
+#       end
+#       if contains_original == "false"
+#           break
+#       end
+#       original = product
+#   end
+#   original
+# end

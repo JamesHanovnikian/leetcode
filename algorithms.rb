@@ -592,3 +592,32 @@
 #   end
 #   sorted
 # end
+
+# def uncommon_from_sentences(s1, s2)
+#   uncommon = []
+#   #   Make a hash of the s1 words.
+#   possible_uncommon = {}
+#   possible_uncommon2 = {}
+#   words_1 = s1.split(" ")
+#   words_2 = s2.split(" ")
+
+#   words_1.each do |word|
+#       if possible_uncommon[word] == nil
+#           possible_uncommon[word] = 0
+#       end
+#       possible_uncommon[word] += 1
+#   end
+#  words_2.each do |word|
+#      if possible_uncommon[word] == nil
+#          possible_uncommon[word] = 0
+#      end
+#      possible_uncommon[word] += 1
+#  end
+
+#   possible_uncommon.each do |k, v|
+#       if v == 1
+#           uncommon << k
+#       end
+#   end
+#   return uncommon
+# end

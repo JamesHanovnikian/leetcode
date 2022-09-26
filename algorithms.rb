@@ -621,3 +621,30 @@
 #   end
 #   return uncommon
 # end
+
+# def reverse_only_letters(s)
+#   answer = ""
+#   reverse_string = ""
+
+#   i = s.length - 1
+#   while i >= 0
+#     if s[i].match(/[A-Za-z]/)
+#         reverse_string = reverse_string + s[i]
+#     end
+#     i = i - 1
+#   end
+
+#   pointer = 0
+#   j = 0
+#   while j < s.length
+#       cur = s[j]
+#       if cur.match(/[A-Za-z]/)
+#           answer = answer + reverse_string[pointer]
+#           pointer += 1
+#       else
+#           answer = answer + cur
+#       end
+#       j += 1
+#   end
+#   answer
+# end

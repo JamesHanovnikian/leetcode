@@ -697,3 +697,33 @@
 #   squared_array.sort
 
 # end
+
+# def can_be_typed_words(text, broken_letters)
+#   broken_letters_hash = {}
+#   i = 0
+#   while i < broken_letters.length
+#       broken_letter = broken_letters[i]
+#       broken_letters_hash[broken_letter] = true
+#       i += 1
+#   end
+#   count = 0
+#   words = text.split(" ")
+#   j = 0
+#   while j < words.length
+#       word_checker = true
+#       h = 0
+#       word = words[j]
+#       while h < word.length
+#           l = word[h]
+#           if broken_letters_hash[l]
+#               word_checker = false
+#           end
+#           h += 1
+#       end
+#       if word_checker == true
+#           count += 1
+#       end
+#       j += 1
+#   end
+#   count
+# end

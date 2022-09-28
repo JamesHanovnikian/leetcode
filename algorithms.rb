@@ -691,3 +691,9 @@
 #   end
 #   original
 # end
+
+# def sorted_squares(nums)
+#   squared_array = nums.map {|num| num * num}
+#   squared_array.sort
+
+# end

@@ -753,3 +753,19 @@
 #       end
 #       medals
 #   end
+
+# def num_jewels_in_stones(jewels, stones)
+#   jewels_hash = {}
+#   jewels = jewels.split("")
+#   jewels.each do |jewel|
+#       jewels_hash[jewel] = true
+#   end
+#   jewel_counter = 0
+#   stones = stones.split("")
+#   stones.each do |stone|
+#       if jewels_hash[stone] == true
+#           jewel_counter += 1
+#       end
+#   end
+#   jewel_counter
+# end

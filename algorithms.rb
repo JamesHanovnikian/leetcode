@@ -727,3 +727,29 @@
 #   end
 #   count
 # end
+
+# def find_relative_ranks(score)
+#   #     Reverse sort?
+#   #     make a new array
+#   #     If statement
+
+#       sorted_scores = score.sort.reverse
+#       sorted_hash = {}
+#       sorted_scores.each_with_index do |score, index|
+#           sorted_hash[score] = index + 1
+#       end
+#       medals = []
+#       score.each do |s|
+#           if sorted_hash[s] == 1
+#               medals << "Gold Medal"
+#           elsif sorted_hash[s] == 2
+#               medals << "Silver Medal"
+#           elsif sorted_hash[s] == 3
+#               medals << "Bronze Medal"
+#           else
+#               placement = sorted_hash[s]
+#               medals << placement.to_s
+#           end
+#       end
+#       medals
+#   end

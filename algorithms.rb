@@ -769,3 +769,13 @@
 #   end
 #   jewel_counter
 # end
+
+# def is_monotonic(nums)
+#   increasing = nums.sort
+#   decreasing = nums.sort.reverse
+#   if nums == increasing || nums == decreasing
+#       return true
+#   else
+#       return false
+#   end
+# end

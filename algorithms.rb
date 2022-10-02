@@ -779,3 +779,22 @@
 #       return false
 #   end
 # end
+
+def find_ocurrences(text, first, second)
+  #      two pointers? if first and second get the next word in the array.
+  x = 0
+  y = 1
+
+  third = []
+  text = text.split(" ")
+  while y < text.length
+    if text[x] == first && text[y] == second
+      if text[y + 1] != nil
+        third << text[y + 1]
+      end
+    end
+    x += 1
+    y += 1
+  end
+  return third
+end

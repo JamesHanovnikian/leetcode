@@ -780,21 +780,61 @@
 #   end
 # end
 
-def find_ocurrences(text, first, second)
-  #      two pointers? if first and second get the next word in the array.
-  x = 0
-  y = 1
+# def find_ocurrences(text, first, second)
+#   #      two pointers? if first and second get the next word in the array.
+#   x = 0
+#   y = 1
 
-  third = []
-  text = text.split(" ")
-  while y < text.length
-    if text[x] == first && text[y] == second
-      if text[y + 1] != nil
-        third << text[y + 1]
-      end
-    end
-    x += 1
-    y += 1
-  end
-  return third
-end
+#   third = []
+#   text = text.split(" ")
+#   while y < text.length
+#     if text[x] == first && text[y] == second
+#       if text[y + 1] != nil
+#         third << text[y + 1]
+#       end
+#     end
+#     x += 1
+#     y += 1
+#   end
+#   return third
+# end
+
+# def common_chars(words)
+#   check = {}
+#    new_words = words[0].split("")
+#    new_words.each do |word|
+#        if check[word] == nil
+#            check[word] = 0
+#        end
+#        check[word] += 1
+#    end
+
+#    words.each do |word|
+#        newCheck = {}
+#        i = 0
+#        while i < word.length
+#            letter = word[i]
+#            if check[letter] != nil && check[letter] > 0
+#                if newCheck[letter] == nil
+#                    newCheck[letter] = 0
+#                end
+#                newCheck[letter] += 1
+#                check[letter] = check[letter] - 1
+#            end
+#            i += 1
+#        end
+
+#        check = newCheck
+#    end
+#    output = []
+#    check.each do |k, v|
+#       if v == 1
+#           output << k
+#       elsif v > 1
+#           v.times do
+#               output << k
+#           end
+#       end
+#    end
+#    return output
+# end

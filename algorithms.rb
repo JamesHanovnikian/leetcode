@@ -858,3 +858,19 @@
 #   end
 #  min_distance
 # end
+
+def busy_student(start_time, end_time, query_time)
+  #     Loop within a loop
+  #     if startTime[i] <= query_time && end_time[i] >= query_time
+  #  active_students = 0
+
+  active_students = 0
+  i = 0
+  while i < start_time.length
+    if start_time[i] <= query_time && end_time[i] >= query_time
+      active_students += 1
+    end
+    i += 1
+  end
+  active_students
+end

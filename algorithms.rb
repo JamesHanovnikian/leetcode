@@ -838,3 +838,23 @@
 #    end
 #    return output
 # end
+
+# def get_min_distance(nums, target, start)
+#   hash = {}
+#   answer = 0
+#   if nums[start] == target
+#       return 0
+#   end
+#   min_distance = 1000
+#   nums.each_with_index do |num, index|
+#       hash[num] = index
+#       if num == target
+#           diff = index - start
+#           diff = diff.abs()
+#           if diff < min_distance
+#               min_distance = diff
+#           end
+#       end
+#   end
+#  min_distance
+# end

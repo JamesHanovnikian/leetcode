@@ -859,18 +859,44 @@
 #  min_distance
 # end
 
-def busy_student(start_time, end_time, query_time)
-  #     Loop within a loop
-  #     if startTime[i] <= query_time && end_time[i] >= query_time
-  #  active_students = 0
+# def busy_student(start_time, end_time, query_time)
+#   #     Loop within a loop
+#   #     if startTime[i] <= query_time && end_time[i] >= query_time
+#   #  active_students = 0
 
-  active_students = 0
-  i = 0
-  while i < start_time.length
-    if start_time[i] <= query_time && end_time[i] >= query_time
-      active_students += 1
-    end
-    i += 1
-  end
-  active_students
-end
+#   active_students = 0
+#   i = 0
+#   while i < start_time.length
+#     if start_time[i] <= query_time && end_time[i] >= query_time
+#       active_students += 1
+#     end
+#     i += 1
+#   end
+#   active_students
+# end
+
+# def is_prefix_of_word(sentence, search_word)
+#   #     counter for how many prefixes are happening?
+#   #     Loop through the sentences.
+#   counter = 0
+#   sentence = sentence.split(" ")
+#   i = 0
+#   while i < sentence.length
+#       word = sentence[i]
+#       same_letters = ""
+#       j = 0
+#       while j < word.length
+#           if word[j] == search_word[j]
+#               same_letters = same_letters + word[j]
+#           else
+#               break
+#           end
+#           j += 1
+#       end
+#       if same_letters == search_word
+#           return i + 1
+#       end
+#       i += 1
+#   end
+#   return -1
+# end

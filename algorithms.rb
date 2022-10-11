@@ -901,33 +901,52 @@
 #   return -1
 # end
 
-def shortest_to_char(s, c)
-  answer = []
-  i = 0
-  indices = []
-  while i < s.length
-    l = s[i]
-    if l == c
-      indices << i
+# def shortest_to_char(s, c)
+#   answer = []
+#   i = 0
+#   indices = []
+#   while i < s.length
+#     l = s[i]
+#     if l == c
+#       indices << i
+#     end
+#     i += 1
+#   end
+#   p indices
+#   i = 0
+#   while i < s.length
+#     j = 0
+#     current_lowest = 1000000
+#     while j < indices.length
+#       indice = indices[j]
+#       sum = indice - i
+#       if sum.abs() < current_lowest
+#         current_lowest = sum.abs()
+#       end
+#       j += 1
+#     end
+#     p indices
+#     answer << current_lowest
+#     i += 1
+#   end
+#   answer
+# end
+
+def second_highest(s)
+  nums_array = []
+  s = s.split("")
+  s.each do |num|
+    if num.match?(/[0-9]/)
+      nums_array << num.to_i
     end
-    i += 1
   end
-  p indices
-  i = 0
-  while i < s.length
-    j = 0
-    current_lowest = 1000000
-    while j < indices.length
-      indice = indices[j]
-      sum = indice - i
-      if sum.abs() < current_lowest
-        current_lowest = sum.abs()
-      end
-      j += 1
-    end
-    p indices
-    answer << current_lowest
-    i += 1
+  nums_array.sort!
+  nums_array = nums_array.uniq
+  p nums_array
+
+  if nums_array.length <= 1
+    return -1
+  else
+    return nums_array[nums_array.length - 2]
   end
-  answer
 end

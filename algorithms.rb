@@ -901,33 +901,33 @@
 #   return -1
 # end
 
-
 def shortest_to_char(s, c)
-  answer = Array.new(s.length)
-  i = 0 
+  answer = []
+  i = 0
   indices = []
-  while i < s.length 
-      l = s[i]
-      if l == c 
-          indices << i 
-      end
-      i += 1
+  while i < s.length
+    l = s[i]
+    if l == c
+      indices << i
+    end
+    i += 1
   end
   p indices
-  i = 0 
-  while i < answer.length 
-      j = 0 
-      current_lowest = 100
-      while j < indices.length 
-          indice = indices[j]
-          sum = indice - i 
-          if sum.abs() < current_lowest 
-              current_lowest = sum.abs()
-          end
-          j += 1
+  i = 0
+  while i < s.length
+    j = 0
+    current_lowest = 1000000
+    while j < indices.length
+      indice = indices[j]
+      sum = indice - i
+      if sum.abs() < current_lowest
+        current_lowest = sum.abs()
       end
-      answer[i] = current_lowest
-      i += 1
+      j += 1
+    end
+    p indices
+    answer << current_lowest
+    i += 1
   end
   answer
 end

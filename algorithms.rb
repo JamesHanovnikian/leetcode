@@ -932,21 +932,39 @@
 #   answer
 # end
 
-def second_highest(s)
-  nums_array = []
-  s = s.split("")
-  s.each do |num|
-    if num.match?(/[0-9]/)
-      nums_array << num.to_i
-    end
-  end
-  nums_array.sort!
-  nums_array = nums_array.uniq
-  p nums_array
+# def second_highest(s)
+#   nums_array = []
+#   s = s.split("")
+#   s.each do |num|
+#     if num.match?(/[0-9]/)
+#       nums_array << num.to_i
+#     end
+#   end
+#   nums_array.sort!
+#   nums_array = nums_array.uniq
+#   p nums_array
 
-  if nums_array.length <= 1
-    return -1
-  else
-    return nums_array[nums_array.length - 2]
-  end
-end
+#   if nums_array.length <= 1
+#     return -1
+#   else
+#     return nums_array[nums_array.length - 2]
+#   end
+# end
+
+# def count_asterisks(s)
+#   s = s.split("|")
+#   i = 0
+#   count = 0
+#   while i < s.length
+#       j = 0
+#       word = s[i]
+#       while j < word.length
+#           if word[j] == "*"
+#               count += 1
+#           end
+#           j += 1
+#       end
+#       i += 2
+#   end
+#   count
+# end

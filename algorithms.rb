@@ -968,3 +968,13 @@
 #   end
 #   count
 # end
+
+# def check_string(s)
+#   s = s.split("")
+#   sorted = s.sort
+#   if sorted == s
+#       return true
+#   else
+#       return false
+#   end
+# end

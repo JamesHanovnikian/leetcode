@@ -978,3 +978,37 @@
 #       return false
 #   end
 # end
+
+def most_frequent_even(nums)
+  #     Loop through the array, if even -->
+  #     hash to store counters
+  #     Loop through the hash, find the ones with the highest count.
+  #     Go with the lowest if it's even.
+
+  even_counter = {}
+  nums.each do |num|
+    if num % 2 == 0
+      if even_counter[num] == nil
+        even_counter[num] = 0
+      end
+      even_counter[num] += 1
+    end
+  end
+  if even_counter == {}
+    return -1
+  end
+  highest_count = 0
+  even_counter.each do |k, v|
+    if v > highest_count
+      highest_count = v
+    end
+  end
+  highest = []
+  even_counter.each do |k, v|
+    if v == highest_count
+      highest << k
+    end
+  end
+  highest.sort!
+  highest[0]
+end

@@ -1038,35 +1038,52 @@
 # hash.sort_by { |h| h.age }
 # p hash
 
-def fair_candy_swap(alice_sizes, bob_sizes)
-  alice_sum = 0
-  bob_sum = 0
+# def fair_candy_swap(alice_sizes, bob_sizes)
+#   alice_sum = 0
+#   bob_sum = 0
 
-  final_needed = (bob_sum + alice_sum) / 2
-  output = [] * 2
+#   final_needed = (bob_sum + alice_sum) / 2
+#   output = [] * 2
 
-  b_hash = {}
+#   b_hash = {}
 
-  bob_sizes.each do |box|
-    bob_sum += box
-    b_hash[box] = "checked"
-  end
+#   bob_sizes.each do |box|
+#     bob_sum += box
+#     b_hash[box] = "checked"
+#   end
 
-  alice_sizes.each do |box|
-    alice_sum += box
-  end
+#   alice_sizes.each do |box|
+#     alice_sum += box
+#   end
 
-  diff = (bob_sum - alice_sum) / 2
+#   diff = (bob_sum - alice_sum) / 2
 
-  i = 0
-  while i < alice_sizes.length
-    a = alice_sizes[i]
-    if b_hash[a + diff]
-      output[0] = a
-      output[1] = a + diff
-      return output
-    end
-    i += 1
-  end
-  return false
-end
+#   i = 0
+#   while i < alice_sizes.length
+#     a = alice_sizes[i]
+#     if b_hash[a + diff]
+#       output[0] = a
+#       output[1] = a + diff
+#       return output
+#     end
+#     i += 1
+#   end
+#   return false
+# end
+
+# def reverse_str(s, k)
+
+#   array = s.chars
+#   array.each_slice(2*k).map {
+#       |x|
+#       if x.size == (2 * k)
+#           x[0...k].reverse + x[k..-1]
+#       elsif x.size < (2 * k) && x.size > k
+#           x[0...k].reverse + x[k..-1]
+#       elsif x.size >= (2 * k)
+#           x[0...k].reverse + x[k..-1]
+#       else
+#           x.reverse
+#       end
+#   }.flatten.join
+# end

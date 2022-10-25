@@ -1087,3 +1087,27 @@
 #       end
 #   }.flatten.join
 # end
+
+
+def merge_similar_items(items1, items2)
+    ret = []
+    counter = {}
+    items1.each do |value, weight|
+        if counter[value] == nil 
+            counter[value] = weight
+        else 
+            counter[value] = counter[value] + weight 
+        end
+    end
+    items2.each do |value, weight|
+        if counter[value] == nil
+            counter[value] = weight
+        else 
+            counter[value] = counter[value] + weight 
+        end
+    end
+    counter.each do |k, v|
+       ret << [k, v]
+    end
+    ret = ret.sort {|a, b| a[0] <=> b[0]}
+end

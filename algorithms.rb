@@ -1088,26 +1088,45 @@
 #   }.flatten.join
 # end
 
+# def merge_similar_items(items1, items2)
+#     ret = []
+#     counter = {}
+#     items1.each do |value, weight|
+#         if counter[value] == nil
+#             counter[value] = weight
+#         else
+#             counter[value] = counter[value] + weight
+#         end
+#     end
+#     items2.each do |value, weight|
+#         if counter[value] == nil
+#             counter[value] = weight
+#         else
+#             counter[value] = counter[value] + weight
+#         end
+#     end
+#     counter.each do |k, v|
+#        ret << [k, v]
+#     end
+#     ret = ret.sort {|a, b| a[0] <=> b[0]}
+# end
 
-def merge_similar_items(items1, items2)
-    ret = []
-    counter = {}
-    items1.each do |value, weight|
-        if counter[value] == nil 
-            counter[value] = weight
-        else 
-            counter[value] = counter[value] + weight 
-        end
-    end
-    items2.each do |value, weight|
-        if counter[value] == nil
-            counter[value] = weight
-        else 
-            counter[value] = counter[value] + weight 
-        end
-    end
-    counter.each do |k, v|
-       ret << [k, v]
-    end
-    ret = ret.sort {|a, b| a[0] <=> b[0]}
-end
+# def intersect(nums1, nums2)
+#   #     hash for nums1
+
+#   output = []
+#   counter_one = {}
+#   nums1.each do |num|
+#       if counter_one[num] == nil
+#           counter_one[num] = 0
+#       end
+#       counter_one[num] += 1
+#   end
+#   nums2.each do |num|
+#       if counter_one[num] != nil && counter_one[num] > 0
+#           output << num
+#           counter_one[num] = counter_one[num] - 1
+#       end
+#   end
+#   output
+# end

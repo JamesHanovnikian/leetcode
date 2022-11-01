@@ -1135,3 +1135,25 @@
 # def can_win_nim(n)
 #   return n % 4 != 0
 # end
+
+# def find_disappeared_numbers(nums)
+#   n = nums.length
+#   missing_nums = []
+#   all_numbers = []
+#   checker = {}
+
+#   nums.each do |num|
+#       checker[num] = "checked"
+#   end
+#   count = 1
+#   n.times do
+#       all_numbers << count
+#       count += 1
+#   end
+#   all_numbers.each do |num|
+#       if checker[num] == nil
+#           missing_nums << num
+#       end
+#   end
+#   missing_nums
+# end

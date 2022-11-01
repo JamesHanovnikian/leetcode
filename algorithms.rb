@@ -1157,3 +1157,23 @@
 #   end
 #   missing_nums
 # end
+
+# def workbook(n, k, arr)
+#   answer = 0
+#   page = 1
+#   # iterate through array.
+#   arr.each do |prob|
+#       index = 1
+#       range = (1..prob + 1).to_a
+#       while index < range.length
+#           if index == page
+#               answer += 1
+#           end
+#           if index == prob || index % k == 0
+#               page += 1
+#           end
+#           index += 1
+#       end
+#   end
+#   answer
+# end

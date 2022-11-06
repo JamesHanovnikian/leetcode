@@ -1177,3 +1177,29 @@
 #   end
 #   answer
 # end
+
+def find_restaurant(list1, list2)
+  list1_hash = {}
+  list1.each_with_index do |item, index|
+    list1_hash[item] = index
+  end
+  i = 0
+  common_strings = {}
+  while i < list2.length
+    item = list2[i]
+    if list1_hash[item] != nil
+      sum = i + list1_hash[item]
+      common_strings[item] = sum
+    end
+    i += 1
+  end
+  common_array = []
+  common_strings.sort_by { |k, v| v }.to_h
+  lowest_value = 100
+  common_strings.each do |k, v|
+    if v < lowest_value
+      lowest_value = v
+    end
+  end
+  common_strings.select { |k, v| v == lowest_value }.map { |i| i[0] }
+end

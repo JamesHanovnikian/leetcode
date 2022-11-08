@@ -1178,28 +1178,46 @@
 #   answer
 # end
 
-def find_restaurant(list1, list2)
-  list1_hash = {}
-  list1.each_with_index do |item, index|
-    list1_hash[item] = index
-  end
-  i = 0
-  common_strings = {}
-  while i < list2.length
-    item = list2[i]
-    if list1_hash[item] != nil
-      sum = i + list1_hash[item]
-      common_strings[item] = sum
+# def find_restaurant(list1, list2)
+#   list1_hash = {}
+#   list1.each_with_index do |item, index|
+#     list1_hash[item] = index
+#   end
+#   i = 0
+#   common_strings = {}
+#   while i < list2.length
+#     item = list2[i]
+#     if list1_hash[item] != nil
+#       sum = i + list1_hash[item]
+#       common_strings[item] = sum
+#     end
+#     i += 1
+#   end
+#   common_array = []
+#   common_strings.sort_by { |k, v| v }.to_h
+#   lowest_value = 100
+#   common_strings.each do |k, v|
+#     if v < lowest_value
+#       lowest_value = v
+#     end
+#   end
+#   common_strings.select { |k, v| v == lowest_value }.map { |i| i[0] }
+# end
+
+def last_stone_weight(stones)
+  while stones.length > 1
+    stones = stones.sort.reverse
+    if stones[0] == stones[1]
+      stones = stones.slice(2, stones.length - 1)
+    elsif stones[0] != stones[1]
+      new = stones[0] - stones[1]
+      stones = stones.slice(2, stones.length - 1)
+      stones << new
     end
-    i += 1
   end
-  common_array = []
-  common_strings.sort_by { |k, v| v }.to_h
-  lowest_value = 100
-  common_strings.each do |k, v|
-    if v < lowest_value
-      lowest_value = v
-    end
+  if stones == []
+    return 0
+  else
+    stones[0]
   end
-  common_strings.select { |k, v| v == lowest_value }.map { |i| i[0] }
 end

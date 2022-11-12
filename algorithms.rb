@@ -1204,20 +1204,42 @@
 #   common_strings.select { |k, v| v == lowest_value }.map { |i| i[0] }
 # end
 
-def last_stone_weight(stones)
-  while stones.length > 1
-    stones = stones.sort.reverse
-    if stones[0] == stones[1]
-      stones = stones.slice(2, stones.length - 1)
-    elsif stones[0] != stones[1]
-      new = stones[0] - stones[1]
-      stones = stones.slice(2, stones.length - 1)
-      stones << new
-    end
-  end
-  if stones == []
-    return 0
-  else
-    stones[0]
-  end
-end
+# def last_stone_weight(stones)
+#   while stones.length > 1
+#     stones = stones.sort.reverse
+#     if stones[0] == stones[1]
+#       stones = stones.slice(2, stones.length - 1)
+#     elsif stones[0] != stones[1]
+#       new = stones[0] - stones[1]
+#       stones = stones.slice(2, stones.length - 1)
+#       stones << new
+#     end
+#   end
+#   if stones == []
+#     return 0
+#   else
+#     stones[0]
+#   end
+# end
+
+# def greatest_letter(s)
+#   hash = {}
+#   array = []
+#   alphabet_hash = {}
+#   alpha = ('a'..'z').to_a.reverse
+#   s = s.split("")
+#   s.each do |l|
+#       hash[l] = "checked"
+#   end
+#   i = 0
+#   while i < alpha.length
+#       letter = alpha[i]
+#       downcased = letter.downcase
+#       upcased = letter.upcase
+#       if hash[downcased] != nil && hash[upcased] != nil
+#           return letter.upcase
+#       end
+#       i += 1
+#   end
+#   return ""
+# end

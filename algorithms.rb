@@ -1243,3 +1243,20 @@
 #   end
 #   return ""
 # end
+
+def truncate_sentence(s, k)
+  #    Split the sentences into an array.
+  #     Make a new string
+  #     k.times do
+
+  s_array = s.split(" ")
+  s = ""
+  i = 0
+  while i < k
+    word = s_array[i]
+
+    s = s + word + " "
+    i += 1
+  end
+  s = s.strip
+end

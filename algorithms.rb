@@ -1244,19 +1244,35 @@
 #   return ""
 # end
 
-def truncate_sentence(s, k)
-  #    Split the sentences into an array.
-  #     Make a new string
-  #     k.times do
+# def truncate_sentence(s, k)
+#   #    Split the sentences into an array.
+#   #     Make a new string
+#   #     k.times do
 
-  s_array = s.split(" ")
-  s = ""
-  i = 0
-  while i < k
-    word = s_array[i]
+#   s_array = s.split(" ")
+#   s = ""
+#   i = 0
+#   while i < k
+#     word = s_array[i]
 
-    s = s + word + " "
-    i += 1
+#     s = s + word + " "
+#     i += 1
+#   end
+#   s = s.strip
+# end
+
+def check_record(s)
+  split = s.split("")
+  absence_counter = {}
+  split.each do |l|
+    if absence_counter[l] == nil
+      absence_counter[l] = 0
+    end
+    absence_counter[l] += 1
   end
-  s = s.strip
+  if s.include?("LLL") || absence_counter["A"] != nil && absence_counter["A"] >= 2
+    return false
+  else
+    return true
+  end
 end

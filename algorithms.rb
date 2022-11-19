@@ -1261,18 +1261,34 @@
 #   s = s.strip
 # end
 
-def check_record(s)
-  split = s.split("")
-  absence_counter = {}
-  split.each do |l|
-    if absence_counter[l] == nil
-      absence_counter[l] = 0
-    end
-    absence_counter[l] += 1
-  end
-  if s.include?("LLL") || absence_counter["A"] != nil && absence_counter["A"] >= 2
-    return false
-  else
-    return true
-  end
-end
+# def check_record(s)
+#   split = s.split("")
+#   absence_counter = {}
+#   split.each do |l|
+#     if absence_counter[l] == nil
+#       absence_counter[l] = 0
+#     end
+#     absence_counter[l] += 1
+#   end
+#   if s.include?("LLL") || absence_counter["A"] != nil && absence_counter["A"] >= 2
+#     return false
+#   else
+#     return true
+#   end
+# end
+
+# def minimumAbsoluteDifference(arr)
+#   arr.sort!
+#   x = 0
+#   y = 1
+#   min_distance = 100000000
+#   while x < arr.length-1
+#        y = x + 1
+#        diff = arr[x]-arr[y]
+#        if diff.abs < min_distance
+#            min_distance = diff.abs
+#        end
+#        x += 1
+#   end
+#   min_distance
+# end

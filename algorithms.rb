@@ -1292,3 +1292,16 @@
 #   end
 #   min_distance
 # end
+
+# def largest_altitude(gain)
+#   current_largest = 0
+# #     check on each iteration.
+# elevation = 0
+# gain.each do |x|
+#   elevation = elevation + x
+#   if elevation > current_largest
+#       current_largest = elevation
+#   end
+# end
+# current_largest
+# end

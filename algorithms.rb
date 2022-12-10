@@ -1304,4 +1304,30 @@
 #   end
 # end
 # current_largest
+
+
+def lemonade_change(bills)
+  # hash to keep track of bills. 
+  # o
+  #  Loop through the array. 
+  # if it's five, add it to the hash
+
+#   five = 0 
+#   ten = 0
+#   bills.each do |num|
+#       if num == 5 
+#           five += 1
+#       elsif num == 10 && five != 0 
+#           ten = ten + 1
+#           five = five - 1
+#       elsif num == 20 && ten != 0 && five != 0 
+#           five = five - 1 
+#           ten = ten - 1
+#       elsif num == 20 && five >= 3 
+#           five = five - 3
+#       else 
+#           return false 
+#       end
+#   end
+#   true
 # end

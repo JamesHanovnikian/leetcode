@@ -1358,3 +1358,21 @@
 #   end
 #   output
 # end
+
+# def time_required_to_buy(tickets, k)
+#   seconds = 0
+#   while true
+#       i = 0
+#       while i < tickets.length
+#           if tickets[i] >= 1
+#               seconds += 1
+#               tickets[i] = tickets[i] - 1
+#           end
+#           if tickets[k] == 0
+#               return seconds
+#               break
+#           end
+#           i += 1
+#       end
+#   end
+# end

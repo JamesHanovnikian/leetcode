@@ -1345,3 +1345,16 @@
 #   end
 #   count
 # end
+
+# def height_checker(heights)
+#   expected = heights.sort
+#   output = 0
+#   i = 0
+#   while i < heights.length
+#       if heights[i] != expected[i]
+#           output += 1
+#       end
+#       i += 1
+#   end
+#   output
+# end

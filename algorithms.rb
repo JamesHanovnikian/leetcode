@@ -1376,3 +1376,31 @@
 #       end
 #   end
 # end
+
+# def top_k_frequent(nums, k)
+#   # Hash Map to find the highest frequency numbers
+#   # Loop through to find the highest value for each one.
+#   # K
+#   hash_map = {}
+#   hash = {}
+#   output = []
+#   i = 0
+#   while i < nums.length
+#       if hash_map[nums[i]] == nil
+#           hash_map[nums[i]] = 0
+#       end
+#       hash_map[nums[i]] += 1
+#       i += 1
+#   end
+
+#   hash_map = hash_map.sort_by{|k,v| v}.reverse
+#   hash_map.each do |k,v|
+#       hash[k] = v
+#   end
+#   i = 0
+#   k.times do
+#       output << hash.keys[i]
+#       i += 1
+#   end
+#   output
+# end

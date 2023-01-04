@@ -1404,3 +1404,23 @@
 #   end
 #   output
 # end
+
+# def is_ugly(n)
+#   prime_factors = [2,3,5]
+#   if n <= 0
+#       return false
+#   end
+#   i = 0
+#   while i < prime_factors.length
+
+#       while n % prime_factors[i] == 0
+#           n = n / prime_factors[i]
+#       end
+
+#       i += 1
+#   end
+#   if n == 1
+#       return true
+#   end
+#   false
+# end

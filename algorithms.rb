@@ -1433,3 +1433,19 @@
 #   end
 #   return ""
 # end
+
+# def find_duplicates(nums)
+#   output = []
+#   num_counter = {}
+
+#   nums.each do |num|
+#       if num_counter[num] == nil
+#           num_counter[num] = 0
+#       end
+#       num_counter[num] += 1
+#       if num_counter[num] == 2
+#           output << num
+#       end
+#   end
+#   output
+# end

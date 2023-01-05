@@ -1424,3 +1424,12 @@
 #   end
 #   false
 # end
+
+# def first_palindrome(words)
+#   words.each do |word|
+#       if word.reverse == word
+#           return word
+#       end
+#   end
+#   return ""
+# end

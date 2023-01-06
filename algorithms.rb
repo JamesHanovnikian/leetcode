@@ -1449,3 +1449,16 @@
 #   end
 #   output
 # end
+
+# def target_indices(nums, target)
+#   output = []
+#   nums.sort!
+#   i = 0
+#   while i < nums.length
+#       if nums[i] == target
+#           output << i
+#       end
+#       i += 1
+#   end
+#   output
+# end

@@ -1463,21 +1463,41 @@
 #   output
 # end
 
-def max_ice_cream(costs, coins)
-  # sort first
-  # Loop through.
-  # Update coins as you go through, keep track of bars bought.
-  # 1, 1, 2, 3, 4
-  costs.sort!
-  bars_bought = 0
-  costs.each do |bar|
-    if coins == 0
-      return bars_bought
-    end
-    if coins >= bar
-      coins = coins - bar
-      bars_bought += 1
-    end
-  end
-  bars_bought
-end
+# def max_ice_cream(costs, coins)
+#   costs.sort!
+#   bars_bought = 0
+#   costs.each do |bar|
+#     if coins == 0
+#       return bars_bought
+#     end
+#     if coins >= bar
+#       coins = coins - bar
+#       bars_bought += 1
+#     end
+#   end
+#   bars_bought
+# end
+
+# array = [1, 2, 3, 4]
+
+# array.slice!(0, 1)
+
+# p array
+
+# def smallest_equal(nums)
+#   indices = []
+
+#   i = 0
+#   while i < nums.length
+#       current_num = nums[i]
+#       if i % 10 == current_num
+#           indices << i
+#       end
+#       i += 1
+#   end
+#   indices.sort!
+#   if indices.length < 1
+#       return -1
+#   end
+#   indices[0]
+# end

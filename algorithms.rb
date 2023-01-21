@@ -1501,3 +1501,35 @@
 #   end
 #   indices[0]
 # end
+
+def is_valid(s)
+  # if s is odd, return false
+  # if first is a closing return false
+
+  if s.length % 2 != 0
+    return false
+  elsif s[0] == "}" || s[0] == ")" || s[0] == "]"
+    return false
+  elsif s[s.length - 1] == "(" || s[s.length - 1] == "[" || s[s.length - 1] == "{"
+    return false
+  end
+
+  pairs = { "(" => ")",
+           "[" => "]",
+           "{" => "}" }
+  stack = []
+
+  # While loop through the string.
+  # If it is an opening, push to the stack
+  #  Elsif pair[pop()] != s[i] return false
+  i = 0
+  while i < s.length
+    if s[i] == "(" || s[i] == "[" || s[i] == "{"
+      stack.push(s[i])
+    elsif pairs[stack.pop()] != s[i]
+      return false
+    end
+    i += 1
+  end
+  stack.length == 0
+end

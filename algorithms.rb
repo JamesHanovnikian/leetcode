@@ -1502,34 +1502,66 @@
 #   indices[0]
 # end
 
-def is_valid(s)
-  # if s is odd, return false
-  # if first is a closing return false
+# def is_valid(s)
+# if s is odd, return false
+# if first is a closing return false
 
-  if s.length % 2 != 0
-    return false
-  elsif s[0] == "}" || s[0] == ")" || s[0] == "]"
-    return false
-  elsif s[s.length - 1] == "(" || s[s.length - 1] == "[" || s[s.length - 1] == "{"
-    return false
-  end
+#   if s.length % 2 != 0
+#     return false
+#   elsif s[0] == "}" || s[0] == ")" || s[0] == "]"
+#     return false
+#   elsif s[s.length - 1] == "(" || s[s.length - 1] == "[" || s[s.length - 1] == "{"
+#     return false
+#   end
 
-  pairs = { "(" => ")",
-           "[" => "]",
-           "{" => "}" }
-  stack = []
+#   pairs = { "(" => ")",
+#            "[" => "]",
+#            "{" => "}" }
+#   stack = []
 
-  # While loop through the string.
-  # If it is an opening, push to the stack
-  #  Elsif pair[pop()] != s[i] return false
-  i = 0
-  while i < s.length
-    if s[i] == "(" || s[i] == "[" || s[i] == "{"
-      stack.push(s[i])
-    elsif pairs[stack.pop()] != s[i]
-      return false
-    end
-    i += 1
-  end
-  stack.length == 0
-end
+#   # While loop through the string.
+#   # If it is an opening, push to the stack
+#   #  Elsif pair[pop()] != s[i] return false
+#   i = 0
+#   while i < s.length
+#     if s[i] == "(" || s[i] == "[" || s[i] == "{"
+#       stack.push(s[i])
+#     elsif pairs[stack.pop()] != s[i]
+#       return false
+#     end
+#     i += 1
+#   end
+#   stack.length == 0
+# end
+
+# def reverse_prefix(word, ch)
+#   #  While loop, find the first occurence. get the index
+#   # Make a new string
+#   # Reverse the string from 0 to index
+#   # Keep going past the index.
+
+#   new_string = ""
+#   index = 0
+#   found = false
+#   while index < word.length
+#       if ch == word[index]
+#           found = true
+#           break
+#       end
+#       index += 1
+#   end
+#   if found == false
+#       return word
+#   end
+#   finish = index
+#   while finish >= 0
+#       new_string = new_string + word[finish]
+#       finish = finish - 1
+#   end
+#   start = index + 1
+#   while start < word.length
+#       new_string = new_string + word[start]
+#       start += 1
+#   end
+#   new_string
+# end

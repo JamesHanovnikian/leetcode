@@ -1565,3 +1565,23 @@
 #   end
 #   new_string
 # end
+
+
+def arrange_coins(n)
+    # While Loop 
+    # i - subtract coins with i 
+    # if i - coins_left < 1 
+    # keep track of total staircases. 
+    coins_left = n 
+    if n == 1 
+        return 1
+    end
+    i = 1
+    flights_climbed = 0
+    while coins_left - i > 0 
+        coins_left = coins_left - i 
+        flights_climbed += 1
+        i += 1
+    end
+    flights_climbed
+end

@@ -1566,22 +1566,46 @@
 #   new_string
 # end
 
+# def arrange_coins(n)
+#     # While Loop
+#     # i - subtract coins with i
+#     # if i - coins_left < 1
+#     # keep track of total staircases.
+#     coins_left = n
+#     if n == 1
+#         return 1
+#     end
+#     i = 1
+#     flights_climbed = 0
+#     while coins_left - i > 0
+#         coins_left = coins_left - i
+#         flights_climbed += 1
+#         i += 1
+#     end
+#     flights_climbed
+# end
 
-def arrange_coins(n)
-    # While Loop 
-    # i - subtract coins with i 
-    # if i - coins_left < 1 
-    # keep track of total staircases. 
-    coins_left = n 
-    if n == 1 
-        return 1
-    end
-    i = 1
-    flights_climbed = 0
-    while coins_left - i > 0 
-        coins_left = coins_left - i 
-        flights_climbed += 1
-        i += 1
-    end
-    flights_climbed
-end
+# def prefix_count(words, pref)
+#     # Loop through words.
+#     # if first letter is not first letter of pref, next
+#     # Go through each word and increment the answer if it is the same
+
+#     i = 0
+#     output = 0
+#     while i < words.length
+#         word = words[i]
+#         j = 0
+#         while j < word.length
+#             if word[j] == pref[j]
+#                 j += 1
+#             else
+#                 break
+#             end
+#             if j == pref.length
+#                 output += 1
+#             end
+#         end
+#         i += 1
+#     end
+#     output
+# end

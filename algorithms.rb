@@ -1636,3 +1636,18 @@
 #   end
 #   new_string.lstrip
 # end
+
+# def maximum69_number (num)
+#   num = num.to_s
+#   num = num.split("")
+#   i = 0
+#   while i < num.length
+#       if num[i] == "6"
+#           num[i] = "9"
+#           break
+#       else
+#           i += 1
+#       end
+#   end
+#   num.join.to_i
+# end

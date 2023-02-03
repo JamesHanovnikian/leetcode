@@ -1609,3 +1609,30 @@
 #     end
 #     output
 # end
+
+# def to_goat_latin(sentence)
+#   # Goat Latin ALgo
+#   s = sentence.split(" ")
+#   # Create a new_string variable.
+#   # Loop through the sentence, keep track of the index.
+#   # if word[0] == "a, e, i, o, u" --> add "ma" to end.
+#   new_string = ""
+#   # i * "a""
+#   i = 0
+#   while i < s.length
+#       word = s[i]
+#       new_word = ""
+#       word_count = i + 1
+#       a = "a" * word_count
+#       if word[0].downcase =~ /[aeiou]/
+#           new_word = word + "ma" + a
+#       else
+#           first_l = word[0]
+#           word.slice!(0)
+#           new_word = word + first_l + "ma" + a
+#       end
+#       new_string = new_string + " " + new_word
+#       i += 1
+#   end
+#   new_string.lstrip
+# end

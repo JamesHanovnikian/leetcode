@@ -1651,3 +1651,26 @@
 #   end
 #   num.join.to_i
 # end
+
+
+def most_common_word(paragraph, banned)
+  paragraph_words = paragraph.downcase.gsub(",","").delete("!?';.").  split
+  banned.each do |banned_word|
+      paragraph_words.delete(banned_word)
+  end
+  hash = {}
+  paragraph_words.each |word|
+      if hash[word] == nil 
+          hash[word] = 0 
+      end
+      hash[word] += 1
+  end
+  max_value = 0
+
+  hash.each do |k,v|
+      if v > max_value 
+          max_value = v 
+      end
+  end
+ return hash.key(max_value)
+end

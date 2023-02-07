@@ -1652,25 +1652,46 @@
 #   num.join.to_i
 # end
 
+# def most_common_word(paragraph, banned)
+#   paragraph_words = paragraph.downcase.gsub(",","").delete("!?';.").  split
+#   banned.each do |banned_word|
+#       paragraph_words.delete(banned_word)
+#   end
+#   hash = {}
+#   paragraph_words.each |word|
+#       if hash[word] == nil
+#           hash[word] = 0
+#       end
+#       hash[word] += 1
+#   end
+#   max_value = 0
 
-def most_common_word(paragraph, banned)
-  paragraph_words = paragraph.downcase.gsub(",","").delete("!?';.").  split
-  banned.each do |banned_word|
-      paragraph_words.delete(banned_word)
-  end
-  hash = {}
-  paragraph_words.each |word|
-      if hash[word] == nil 
-          hash[word] = 0 
-      end
-      hash[word] += 1
-  end
-  max_value = 0
+#   hash.each do |k,v|
+#       if v > max_value
+#           max_value = v
+#       end
+#   end
+#  return hash.key(max_value)
+# end
 
-  hash.each do |k,v|
-      if v > max_value 
-          max_value = v 
-      end
+#561 Array Partition
+
+# Task: Of the minimum of each pair in the array, find the maximum sum of that.
+# solution is to sort the array so that the lowest nums are paired together, getting the min from there. If you add them up you'll get max sum.
+# Avoids having to get all possible pairs through array.
+
+def array_pair_sum(nums)
+  nums.sort!
+  x = 0
+  y = 1
+  sum = 0
+  while y < nums.length
+    array = []
+    array << nums[x]
+    array << nums[y]
+    sum = sum + array.min()
+    x += 2
+    y = x + 1
   end
- return hash.key(max_value)
+  sum
 end

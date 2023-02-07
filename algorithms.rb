@@ -1680,18 +1680,18 @@
 # solution is to sort the array so that the lowest nums are paired together, getting the min from there. If you add them up you'll get max sum.
 # Avoids having to get all possible pairs through array.
 
-def array_pair_sum(nums)
-  nums.sort!
-  x = 0
-  y = 1
-  sum = 0
-  while y < nums.length
-    array = []
-    array << nums[x]
-    array << nums[y]
-    sum = sum + array.min()
-    x += 2
-    y = x + 1
-  end
-  sum
-end
+# def array_pair_sum(nums)
+#   nums.sort!
+#   x = 0
+#   y = 1
+#   sum = 0
+#   while y < nums.length
+#     array = []
+#     array << nums[x]
+#     array << nums[y]
+#     sum = sum + array.min()
+#     x += 2
+#     y = x + 1
+#   end
+#   sum
+# end

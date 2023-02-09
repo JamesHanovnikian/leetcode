@@ -1703,12 +1703,9 @@
 #       j = 0
 #       sum = 0
 #       account = accounts[i]
-#       while j < account.length
-#           sum = sum + account[j]
-#           j += 1
-#       end
-#       if sum > highest_bank_account
-#           highest_bank_account = sum
+#       account.sum()
+#       if account.sum() > highest_bank_account
+#           highest_bank_account = account.sum()
 #       end
 #       i += 1
 #   end

@@ -1695,3 +1695,22 @@
 #   end
 #   sum
 # end
+
+# def maximum_wealth(accounts)
+#   i = 0
+#   highest_bank_account = 0
+#   while i < accounts.length
+#       j = 0
+#       sum = 0
+#       account = accounts[i]
+#       while j < account.length
+#           sum = sum + account[j]
+#           j += 1
+#       end
+#       if sum > highest_bank_account
+#           highest_bank_account = sum
+#       end
+#       i += 1
+#   end
+#   highest_bank_account
+# end

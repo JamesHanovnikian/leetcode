@@ -1711,3 +1711,24 @@
 #   end
 #   highest_bank_account
 # end
+
+def bubble_sort(array)
+  sorted = false
+  unsorted_until_index = array.length - 1
+
+  while sorted == false
+    sorted = true
+    i = 0
+    while i < unsorted_until_index
+      if array[i] > array[i + 1]
+        array[i], array[i + 1] = array[i + 1], array[i]
+        sorted = false
+      end
+      i += 1
+    end
+    unsorted_until_index = unsorted_until_index - 1
+  end
+  array
+end
+
+p bubble_sort([65, 55, 45, 35, 25, 15, 10])

@@ -1757,4 +1757,23 @@
 #   array
 # end
 
-p selection_sort([4, 2, 7, 1, 3])
+# p selection_sort([4, 2, 7, 1, 3])
+
+# Insertion Sort
+
+def insertion_sort(array)
+  index = 1
+  while index < array.length
+    position = index
+    temp_value = array[index]
+    while position > 0 and array[position - 1] > temp_value
+      array[position] = array[position - 1]
+      position = position - 1
+    end
+    array[position] = temp_value
+    index += 1
+  end
+  array
+end
+
+p insertion_sort([4, 5, 2, 1, 9])

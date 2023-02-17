@@ -1761,19 +1761,60 @@
 
 # Insertion Sort
 
-def insertion_sort(array)
-  index = 1
-  while index < array.length
-    position = index
-    temp_value = array[index]
-    while position > 0 and array[position - 1] > temp_value
-      array[position] = array[position - 1]
-      position = position - 1
-    end
-    array[position] = temp_value
-    index += 1
-  end
-  array
-end
+# def insertion_sort(array)
+#   index = 1
+#   while index < array.length
+#     position = index
+#     temp_value = array[index]
+#     while position > 0 and array[position - 1] > temp_value
+#       array[position] = array[position - 1]
+#       position = position - 1
+#     end
+#     array[position] = temp_value
+#     index += 1
+#   end
+#   array
+# end
 
-p insertion_sort([4, 5, 2, 1, 9])
+# p insertion_sort([4, 5, 2, 1, 9])
+
+# Leetcode Unique Number of Occurences
+
+# def unique_occurrences(arr)
+#   # Input: [1, 1, 5]
+#   # Output: true
+
+#   # Input: [10, 5, 2]
+#   # Output: False!
+
+#   # occurences_hash = {}
+#   # .each loop through the arr, and count occurences of each number using a hash map.
+#   # .each loop through the hash map, and check to see if there's a repeated value.
+#       # seperate hash map for checking the values {}
+#       # if occurences_number[value] --> false
+#       # Return true at the end of the problem
+
+#       # O(N) to Loop through the original array
+#       # O(N) to check if the frequences are unique or not
+
+#       # O(N) performance
+
+#   occurences_hash = {}
+#   arr.each do |num|
+#       if occurences_hash[num] == nil
+#           occurences_hash[num] = 0
+#       end
+#       occurences_hash[num] +=  1
+#   end
+
+#   occurences_freq = {}
+
+#   occurences_hash.each do |num, freq|
+#       if occurences_freq[freq] == nil
+#           occurences_freq[freq] = "checked"
+#       elsif occurences_freq[freq] == "checked"
+#           return false
+#       end
+#   end
+#   true
+# end

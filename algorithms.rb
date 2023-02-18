@@ -1818,3 +1818,20 @@
 #   end
 #   true
 # end
+
+# def separate_digits(nums)
+#   # Input: [12, 4, 10, 100]
+#   # Output: [1, 2, 4, 1, 0, 1, 0, 0]
+
+#   # .each Loop through nums array.
+#   # split num by digit, and replace current num with the split array
+#   #  .flatten to make it into one array again
+
+#   i = 0
+#   while i < nums.length
+#       nums_array = nums[i].to_s.split("").map{|s| s.to_i}
+#       nums[i] = nums_array
+#       i += 1
+#   end
+#   nums.flatten
+# end

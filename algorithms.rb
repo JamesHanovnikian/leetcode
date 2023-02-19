@@ -1869,27 +1869,67 @@
 
 # p matches
 
-def find_numbers(nums)
-  # Input: [13, 12, 1]
-  # Output: 2
+# def find_numbers(nums)
+#   # Input: [13, 12, 1]
+#   # Output: 2
 
-  # Input: [333, 444, 555, 1000]
-  # Output: 1
+#   # Input: [333, 444, 555, 1000]
+#   # Output: 1
 
-  # Create a variable holding count = 0
-  # .each loop through the array.
-  # Convert the int to a string, split the string, count length of string. if string % 2 == 0 --> add one to count
-  # Return Count
+#   # Create a variable holding count = 0
+#   # .each loop through the array.
+#   # Convert the int to a string, split the string, count length of string. if string % 2 == 0 --> add one to count
+#   # Return Count
 
-  even_nums = 0
+#   even_nums = 0
 
-  nums.each do |num|
-    length = num.to_s.length
-    if length % 2 == 0
-      even_nums += 1
+#   nums.each do |num|
+#     length = num.to_s.length
+#     if length % 2 == 0
+#       even_nums += 1
+#     end
+#   end
+#   even_nums
+
+#   # O(n) - Complexity. For n elements in the array, we go through each one to check if it's even or not.
+# end
+
+#  Count Operations
+
+def count_operations(num1, num2)
+
+  # Input: num1 = 2 num2 = 1
+
+  #  2 - 1 = 1
+  #  num1 = 1 num2 = 1
+  # Output:  2
+
+  # Input: num1 = 2 num2 = 3
+
+  #  num2 = 3-2 = 1 num1 = 2
+  #  num1 = 2- 1 = 1 num2 = 1
+  #  1 -1 = 0
+  # Output: 3
+
+  # While true loop, while num1 != 0 || num2 != 0
+  # if num1 >= num2 --> num1 = num1 - num2
+  # elsif num2 >= num1 --> num2 = num2 - num1
+  # Return operations.
+
+  operations = 0
+  while true
+    if num1 == 0 || num2 == 0
+      break
     end
+    if num1 > num2
+      num1 = num1 - num2
+    elsif num2 > num1
+      num2 = num2 - num1
+    elsif num1 == num2
+      operations += 1
+      break
+    end
+    operations += 1
   end
-  even_nums
-
-  # O(n) - Complexity. For n elements in the array, we go through each one to check if it's even or not.
+  return operations
 end

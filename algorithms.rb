@@ -1835,3 +1835,61 @@
 #   end
 #   nums.flatten
 # end
+
+# O(n)
+
+# require "set"
+
+# teams = [
+#   { "id" => 47, "name" => "Ecuador" },
+#   { "id" => 48, "name" => "Qatar" },
+#   { "id" => 49, "name" => "Japan" },
+#   { "id" => 50, "name" => "Greece" },
+# ]
+
+# matches = []
+# played = {}
+
+# i = 0
+# while i < teams.length
+#   j = 0
+#   while j < teams.length
+#     if i != j
+#       team_one_id = teams[i]["id"]
+#       team_two_id = teams[j]["id"]
+#       if played[[team_one_id, team_two_id]] == nil && played[[team_two_id, team_one_id]] == nil
+#         matches << [team_one_id, team_two_id]
+#         played[[team_one_id, team_two_id]] = "played"
+#       end
+#     end
+#     j += 1
+#   end
+#   i += 1
+# end
+
+# p matches
+
+def find_numbers(nums)
+  # Input: [13, 12, 1]
+  # Output: 2
+
+  # Input: [333, 444, 555, 1000]
+  # Output: 1
+
+  # Create a variable holding count = 0
+  # .each loop through the array.
+  # Convert the int to a string, split the string, count length of string. if string % 2 == 0 --> add one to count
+  # Return Count
+
+  even_nums = 0
+
+  nums.each do |num|
+    length = num.to_s.length
+    if length % 2 == 0
+      even_nums += 1
+    end
+  end
+  even_nums
+
+  # O(n) - Complexity. For n elements in the array, we go through each one to check if it's even or not.
+end

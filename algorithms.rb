@@ -1896,40 +1896,61 @@
 
 #  Count Operations
 
-def count_operations(num1, num2)
+# def count_operations(num1, num2)
 
-  # Input: num1 = 2 num2 = 1
+#   # Input: num1 = 2 num2 = 1
 
-  #  2 - 1 = 1
-  #  num1 = 1 num2 = 1
-  # Output:  2
+#   #  2 - 1 = 1
+#   #  num1 = 1 num2 = 1
+#   # Output:  2
 
-  # Input: num1 = 2 num2 = 3
+#   # Input: num1 = 2 num2 = 3
 
-  #  num2 = 3-2 = 1 num1 = 2
-  #  num1 = 2- 1 = 1 num2 = 1
-  #  1 -1 = 0
-  # Output: 3
+#   #  num2 = 3-2 = 1 num1 = 2
+#   #  num1 = 2- 1 = 1 num2 = 1
+#   #  1 -1 = 0
+#   # Output: 3
 
-  # While true loop, while num1 != 0 || num2 != 0
-  # if num1 >= num2 --> num1 = num1 - num2
-  # elsif num2 >= num1 --> num2 = num2 - num1
-  # Return operations.
+#   # While true loop, while num1 != 0 || num2 != 0
+#   # if num1 >= num2 --> num1 = num1 - num2
+#   # elsif num2 >= num1 --> num2 = num2 - num1
+#   # Return operations.
 
-  operations = 0
-  while true
-    if num1 == 0 || num2 == 0
-      break
-    end
-    if num1 > num2
-      num1 = num1 - num2
-    elsif num2 > num1
-      num2 = num2 - num1
-    elsif num1 == num2
-      operations += 1
-      break
-    end
-    operations += 1
-  end
-  return operations
-end
+#   operations = 0
+#   while true
+#     if num1 == 0 || num2 == 0
+#       break
+#     end
+#     if num1 > num2
+#       num1 = num1 - num2
+#     elsif num2 > num1
+#       num2 = num2 - num1
+#     elsif num1 == num2
+#       operations += 1
+#       break
+#     end
+#     operations += 1
+#   end
+#   return operations
+# end
+
+# def are_occurrences_equal(s)
+#   letter_count = {}
+#   i = 0
+#   while i < s.length
+#       letter = s[i]
+#       if letter_count[letter] == nil
+#           letter_count[letter] = 0
+#       end
+#       letter_count[letter] += 1
+#       i += 1
+#   end
+
+#   first = letter_count[s[0]]
+#   letter_count.each do |l, c|
+#       if c != first
+#           return false
+#       end
+#   end
+#   return true
+# end

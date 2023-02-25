@@ -1982,3 +1982,27 @@
 #   end
 #   new_string.reverse
 # end
+
+def sum_of_unique(nums)
+  checker = {}
+  unique_elements = []
+
+  i = 0
+  while i < nums.length
+    num = nums[i]
+    if checker[num] == nil
+      checker[num] = "unique"
+      i += 1
+      next
+    else
+      checker[num] = "not_unique"
+      i += 1
+    end
+  end
+  checker.each do |k, v|
+    if v == "unique"
+      unique_elements << k
+    end
+  end
+  unique_elements.sum
+end

@@ -1955,30 +1955,30 @@
 #   return true
 # end
 
-def freq_alphabets(s)
-  # create a hash map of a-z numbered with k v pairs.
-  # create an empty s
-  # Split the string by using .split(/[s/#]/)
-  # While Loop through the string
-  # look up the # in this iteration and give out the value
-  # Return new string
+# def freq_alphabets(s)
+#   # create a hash map of a-z numbered with k v pairs.
+#   # create an empty s
+#   # Split the string by using .split(/[s/#]/)
+#   # While Loop through the string
+#   # look up the # in this iteration and give out the value
+#   # Return new string
 
-  hash_map = ("a".."z").each.with_index(1).to_h
-  new_string = ""
-  # Start from last index
-  # If there is NO # --> Loop up that digit,
-  # If there is a #, count the next two digits and look it up 
-  i = s.length - 1
-  while i >= 0
-    if s[i] == "#"
-      num = s[i - 2] + s[i - 1]
-      new_string = new_string + hash_map.key(num.to_i)
-      i = i - 3
-    else
-      num = s[i].to_i
-      new_string = new_string + hash_map.key(num)
-      i = i - 1
-    end
-  end
-  new_string.reverse
-end
+#   hash_map = ("a".."z").each.with_index(1).to_h
+#   new_string = ""
+#   # Start from last index
+#   # If there is NO # --> Loop up that digit,
+#   # If there is a #, count the next two digits and look it up 
+#   i = s.length - 1
+#   while i >= 0
+#     if s[i] == "#"
+#       num = s[i - 2] + s[i - 1]
+#       new_string = new_string + hash_map.key(num.to_i)
+#       i = i - 3
+#     else
+#       num = s[i].to_i
+#       new_string = new_string + hash_map.key(num)
+#       i = i - 1
+#     end
+#   end
+#   new_string.reverse
+# end

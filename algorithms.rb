@@ -2013,5 +2013,35 @@
 #       if trip[arriv] == nil
 #           return arriv
 #       end
+
 #   end
+# end
+
+# def merge_alternately(word1, word2)
+#   # Merge Strings
+#   # "abc" -- > "pqr"
+#   # new_string = ""
+#   # while loop
+
+#   new_string = ""
+#   loop_length = 0
+#   if word1.length > word2.length
+#       loop_length = word1.length
+#   else
+#       loop_length = word2.length
+#   end
+
+#   i = 0
+#   while i < loop_length
+#       if word1[i] != nil && word2[i] != nil
+#           new_string = new_string + word1[i] + word2[i]
+
+#       elsif word1[i] != nil && word2[i] == nil
+#           new_string = new_string + word1[i]
+#       elsif word2[i] != nil && word1[i] == nil
+#           new_string = new_string + word2[i]
+#       end
+#      i += 1
+#   end
+#   new_string
 # end

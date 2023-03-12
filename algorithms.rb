@@ -2045,3 +2045,28 @@
 #   end
 #   new_string
 # end
+
+# def maximum_count(nums)
+#   # Something to keep count of neg and pos
+#   # Var holding neg and pos integers.
+#   # find max from abs of pos and neg
+
+#   # While loop
+
+#   pos = 0
+#   neg = 0
+#   i = 0
+#   while i < nums.length
+#       if nums[i] < 0
+#           neg += 1
+#       elsif nums[i] > 0
+#           pos += 1
+#       end
+#       i += 1
+#   end
+#   if pos > neg
+#       return pos
+#   else
+#       return neg
+#   end
+# end

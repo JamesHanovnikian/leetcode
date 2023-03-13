@@ -2070,3 +2070,24 @@
 #       return neg
 #   end
 # end
+
+# def shuffle(nums, n)
+#   # two-pointer?
+#   # one var starts at 0 the other at nums.length - n
+#   # make an empty array to hold the
+#   # add one to each
+#   # While i < n
+
+#   i = 0
+#   j = n
+
+#   shuffled_array = []
+
+#   while i < n
+#       shuffled_array << nums[i]
+#       shuffled_array << nums[j]
+#       j += 1
+#       i += 1
+#   end
+#   shuffled_array
+# end

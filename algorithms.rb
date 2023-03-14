@@ -2091,3 +2091,24 @@
 #   end
 #   shuffled_array
 # end
+
+# def next_greatest_letter(letters, target)
+#   # Smallest char that is lex greater than target.
+
+#   # Hash of all letters set up with numbers
+#   # hash = ("a".."z").map)
+#   # Loop through letters, find the "smallest" character.
+#   # if there are no characters greater than target --> return letters[0]
+#   letters_hash = ('a'..'z').each.with_index(1).to_h
+
+#   i = 0
+#   letters.sort!
+#   while i < letters.length
+#       current_letter = letters[i]
+#       if letters_hash[current_letter] > letters_hash[target]
+#           return current_letter
+#       end
+#       i += 1
+#   end
+#   letters[0]
+# end

@@ -2112,3 +2112,34 @@
 #   end
 #   letters[0]
 # end
+
+# def string_matching(words)
+#   output = []
+
+#   # output where im holding which strings are substrings
+#   # create a hash map of everything in words.
+#   # if first letter
+
+#   #  Loop within a loop ?
+#   # while loop i
+#   # while loop j
+#   # if word[i][0] == word[j][0]
+#   # if its the same increment by 1
+
+#    i = 0
+#    while i < words.length
+#       j = 0
+#       while j < words.length
+#           if j != i
+#               if words[i].length > words[j].length
+#                   if words[i].include?(words[j])
+#                       output << words[j]
+#                   end
+#               end
+#           end
+#           j += 1
+#       end
+#       i +=1
+#   end
+#   output.uniq
+# end

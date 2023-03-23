@@ -2143,3 +2143,35 @@
 #   end
 #   output.uniq
 # end
+
+# def max_ascending_sum(nums)
+#   # two pointers, starts counting if higher.
+#   # if y < x, put the sum in max?
+#   # Loop through the array.
+#   # Return highest sum
+
+#   x = 0
+#   y = 1
+
+#   highest_sum = 0
+
+#   sum = nums[0]
+#   while y < nums.length
+
+#       if nums[y] > nums[x]
+#           sum = sum + nums[y]
+#       else
+
+#           if sum > highest_sum
+#               highest_sum = sum
+#           end
+#           sum = nums[y]
+#       end
+#       x += 1
+#       y = x + 1
+#   end
+#   if sum > highest_sum
+#       highest_sum = sum
+#   end
+#   highest_sum
+# end

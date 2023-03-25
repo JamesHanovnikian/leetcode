@@ -2175,3 +2175,31 @@
 #   end
 #   highest_sum
 # end
+
+# def count_balls(low_limit, high_limit)
+#   # output is highest balls in one box.
+#   # make a range lowLimit..highLimit
+#   # Create a hash map holding the boxes?
+#   current_highest_ball = 0
+#   box_counts = {}
+#   balls = (low_limit..high_limit).to_a
+#   # while loop
+#   i = 0
+#   while i < balls.length
+#       ball = balls[i]
+#       box_num = ball.digits.sum
+#       if box_counts[box_num] == nil
+#           box_counts[box_num] = 0
+#       end
+#       box_counts[box_num] += 1
+
+#       if box_counts[box_num] && box_counts[box_num] >            current_highest_ball
+#           current_highest_ball = box_counts[box_num]
+#       end
+#       i += 1
+#   end
+
+#   # Each iteration, add the digits and then see if there is a box, add one count to the balls in it.
+#   # Check the value, is it bigger than the current max balls in a given box?
+#   current_highest_ball
+# end

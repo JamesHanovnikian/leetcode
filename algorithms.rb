@@ -2203,3 +2203,33 @@
 #   # Check the value, is it bigger than the current max balls in a given box?
 #   current_highest_ball
 # end
+
+# def interpret(command)
+#   # Need to loop through for sure
+#   # Make a new empty string
+#   # if current is "G" --> "G"
+#   # ( --> check next char i + 2
+#   # ( - check next character if "a" --> i + 3
+
+#   translated = ""
+
+# Solution --> just need to check what is the right of the ( and then increase index accordingly.
+
+#   i = 0
+#   while i < command.length
+#       current = command[i]
+#       if current == "G"
+#           translated = translated + current
+#           i += 1
+#       elsif current == "("
+#           if command[i+1] == ")"
+#               translated = translated + "o"
+#               i += 2
+#           elsif command[i+1] == "a"
+#               translated = translated + "al"
+#               i += 4
+#           end
+#       end
+#   end
+#   translated
+# end

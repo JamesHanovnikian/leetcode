@@ -2233,3 +2233,33 @@
 #   end
 #   translated
 # end
+
+# def garbage_collection(garbage, travel)
+#   # Start backwards at last index. If you see certain type --> everything before that the truck has to go to.
+
+#   latest_house = {}
+#   i = garbage.length - 1
+#   minutes = 0
+#   while i >= 0
+#       house = garbage[i]
+#       j = house.length - 1
+#       while j >= 0
+#           type = house[j]
+#           if latest_house[type] == nil
+#               latest_house[type] = i
+#           end
+#           j = j - 1
+#       end
+#       i = i - 1
+#   end
+#   minutes = garbage.join.length
+#  latest_house.each do |type, latest|
+#       if latest >= travel.length
+#           minutes = minutes + travel.sum
+#       else
+#           travel_mins = travel.slice(0, latest).sum
+#           minutes = minutes + travel_mins
+#       end
+#  end
+#  minutes
+# end

@@ -2263,3 +2263,32 @@
 #  end
 #  minutes
 # end
+
+# def halves_are_alike(s)
+#   # Split the string into a and b
+#   s.downcase!
+#   a = s.slice(0, s.length/2)
+#   b = s.slice(s.length/2, s.length)
+
+#   vowels = {'a' => true, 'e' => true, 'i' => true , 'o' => true, 'u'  => true}
+
+#   a_vowels = 0
+#   b_vowels = 0
+
+#   i = 0
+#   while i < a.length
+#       if vowels[a[i]] != nil
+#           a_vowels += 1
+#       end
+#       if vowels[b[i]] != nil
+#           b_vowels += 1
+#       end
+#       i += 1
+#   end
+
+#   if a_vowels == b_vowels
+#       return true
+#   else
+#       return false
+#   end
+# end

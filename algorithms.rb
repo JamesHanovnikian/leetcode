@@ -2348,3 +2348,25 @@
 #   end
 #  boats_filled
 # end
+
+# def pivot_array(nums, pivot)
+#   less_than = []
+#   greater_than = []
+#   i = 0
+#   pivot_nums = 0
+#   while i < nums.length
+#       num = nums[i]
+#       if num < pivot
+#           less_than << num
+#       elsif num > pivot
+#           greater_than << num
+#       elsif num == pivot
+#           pivot_nums += 1
+#       end
+#       i += 1
+#   end
+#   pivot_nums.times do
+#       less_than << pivot
+#   end
+#   less_than + greater_than
+# end

@@ -2293,41 +2293,58 @@
 #   end
 # end
 
+# def find_difference(nums1, nums2)
+#   # output = two arrays, one is distinct nums in nums1 NOT in 2
+#   # create a hash for nums2
+#   # Loop through nums1 if the num is NOT in the hash, add to empty array
+#   nums1_hash = {}
+#   nums2_hash = {}
+#   nums1_distinct = []
+#   nums2_distinct = []
+#   i = 0
+#   while i < nums2.length
+#       num = nums2[i]
+#       if nums2_hash[num] == nil
+#           nums2_hash[num] = "checked"
+#       end
+#       i += 1
+#   end
 
-def find_difference(nums1, nums2)
-  # output = two arrays, one is distinct nums in nums1 NOT in 2
-  # create a hash for nums2 
-  # Loop through nums1 if the num is NOT in the hash, add to empty array
-  nums1_hash = {}
-  nums2_hash = {}
-  nums1_distinct = []
-  nums2_distinct = []
-  i = 0 
-  while i < nums2.length 
-      num = nums2[i]
-      if nums2_hash[num] == nil 
-          nums2_hash[num] = "checked"
-      end
-      i += 1
-  end
+#   i = 0
+#   while i < nums1.length
+#       num = nums1[i]
+#       nums1_hash[num] = "checked"
+#       if nums2_hash[num] == nil
+#           nums1_distinct << num
+#       end
+#       i += 1
+#   end
+#   i = 0
+#   while i < nums2.length
+#       num = nums2[i]
+#       if nums1_hash[num] == nil
+#           nums2_distinct << num
+#       end
+#       i += 1
+#   end
 
-  i = 0 
-  while i < nums1.length 
-      num = nums1[i]
-      nums1_hash[num] = "checked"
-      if nums2_hash[num] == nil 
-          nums1_distinct << num 
-      end
-      i += 1
-  end
-  i = 0 
-  while i < nums2.length 
-      num = nums2[i]
-      if nums1_hash[num] == nil 
-          nums2_distinct << num
-      end
-      i += 1
-  end
+#   [nums1_distinct.uniq, nums2_distinct.uniq]
+# end
 
-  [nums1_distinct.uniq, nums2_distinct.uniq]
-end
+# def num_rescue_boats(people, limit)
+#   people.sort!
+#   boats_filled = 0
+#   x = 0
+#   y = people.length-1
+
+#   while x <= y
+#       heaviest = people[y]
+#       lightest = people[x]
+#       boats_filled += 1
+#       if heaviest + lightest <= limit
+#            x += 1
+#       end
+#      y = y - 1
+#   end
+#  boats_filled
+# end

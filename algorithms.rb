@@ -2370,3 +2370,21 @@
 #   end
 #   less_than + greater_than
 # end
+
+# def vowel_strings(words, left, right)
+#   vowels = {"a" => "vowel", "e" => "vowel", "i" => "vowel", "o" => "vowel", "u" => "vowel"}
+
+#   vowel_words = 0
+#   # iterate thru words array.
+#   # check if last and first are a vowel, if they ARE then add one to vowel_words.
+
+#   i = 0
+#   while i < words.length
+#       word = words[i]
+#       if vowels[word[0]] != nil && vowels[word[word.length-1]] != nil
+#           vowel_words += 1
+#       end
+#       i += 1
+#   end
+#   vowel_words
+# end

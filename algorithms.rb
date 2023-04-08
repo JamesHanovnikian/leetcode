@@ -2406,3 +2406,49 @@
 #   end
 #   (nums + reversed_array).uniq.count
 # end
+
+# Recursive Code.
+# Recursively Recurse with Recursion.
+
+#  Base Case = the case/scenario where the function breaks from recursion, or you get the number you want.
+# 1. Identify what the base case is.
+# 2. Walk through the function assuming it's dealing with the case.
+# 3. Then walk through the function with the next example.
+# 4.
+
+# def countdown(number)
+#   puts number
+#   if number == 0
+#     return
+#   else
+#     countdown(number - 1)
+#   end
+# end
+
+# puts countdown(10)
+
+def find_gcd(nums)
+  # FInd Greatest Common Denm
+
+  current_smallest = nums[0]
+  current_largest = nums[1]
+  i = 0
+  while i < nums.length
+    num = nums[i]
+    if num > current_largest
+      current_largest = num
+    elsif num < current_smallest
+      current_smallest = num
+    end
+    i += 1
+  end
+
+  poss_divisor = current_smallest
+
+  while poss_divisor >= 0
+    if current_smallest % poss_divisor == 0 && current_largest % poss_divisor == 0
+      return poss_divisor
+    end
+    poss_divisor = poss_divisor - 1
+  end
+end

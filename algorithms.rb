@@ -2388,3 +2388,21 @@
 #   end
 #   vowel_words
 # end
+
+# def count_distinct_integers(nums)
+#   # Loop through nums, reverse the digit, then .push to nums.
+#   # while i < starting_nums.length
+#   # .char
+#   # .reverse
+#   # .uniq at the end and then throw a count too.
+
+#   starting_num_length = nums
+#   i = 0
+#   reversed_array = []
+#   while i < starting_num_length.length
+#       num = starting_num_length[i]
+#       reversed_array << num.to_s.reverse.to_i
+#       i += 1
+#   end
+#   (nums + reversed_array).uniq.count
+# end

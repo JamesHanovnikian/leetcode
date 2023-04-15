@@ -2427,28 +2427,35 @@
 
 # puts countdown(10)
 
-def find_gcd(nums)
-  # FInd Greatest Common Denm
+# def find_gcd(nums)
+#   # FInd Greatest Common Denm
 
-  current_smallest = nums[0]
-  current_largest = nums[1]
-  i = 0
-  while i < nums.length
-    num = nums[i]
-    if num > current_largest
-      current_largest = num
-    elsif num < current_smallest
-      current_smallest = num
-    end
-    i += 1
-  end
+#   current_smallest = nums[0]
+#   current_largest = nums[1]
+#   i = 0
+#   while i < nums.length
+#     num = nums[i]
+#     if num > current_largest
+#       current_largest = num
+#     elsif num < current_smallest
+#       current_smallest = num
+#     end
+#     i += 1
+#   end
 
-  poss_divisor = current_smallest
+#   poss_divisor = current_smallest
 
-  while poss_divisor >= 0
-    if current_smallest % poss_divisor == 0 && current_largest % poss_divisor == 0
-      return poss_divisor
-    end
-    poss_divisor = poss_divisor - 1
-  end
+#   while poss_divisor >= 0
+#     if current_smallest % poss_divisor == 0 && current_largest % poss_divisor == 0
+#       return poss_divisor
+#     end
+#     poss_divisor = poss_divisor - 1
+#   end
+# end
+
+# Two out of three solution
+# find the uniq nums of each array, add them to one array, tally aka create a hash with count of each, from that select the one that has value of more than two and then take the keys from that.
+
+def two_out_of_three(nums1, nums2, nums3)
+  (nums1.uniq + nums2.uniq + nums3.uniq).tally.select { |k, v| v >= 2 }.keys
 end

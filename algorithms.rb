@@ -2456,6 +2456,20 @@
 # Two out of three solution
 # find the uniq nums of each array, add them to one array, tally aka create a hash with count of each, from that select the one that has value of more than two and then take the keys from that.
 
-def two_out_of_three(nums1, nums2, nums3)
-  (nums1.uniq + nums2.uniq + nums3.uniq).tally.select { |k, v| v >= 2 }.keys
+# def two_out_of_three(nums1, nums2, nums3)
+#   (nums1.uniq + nums2.uniq + nums3.uniq).tally.select { |k, v| v >= 2 }.keys
+# end
+
+def duplicate_zeros(arr)
+  i = 0
+  max_length = arr.length
+  while i < max_length
+    if arr[i] == 0
+      arr.insert(i, 0)
+      i += 2
+    else
+      i += 1
+    end
+  end
+  arr.slice!(max_length, arr.length)
 end

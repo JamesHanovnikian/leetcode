@@ -2460,16 +2460,34 @@
 #   (nums1.uniq + nums2.uniq + nums3.uniq).tally.select { |k, v| v >= 2 }.keys
 # end
 
-def duplicate_zeros(arr)
-  i = 0
-  max_length = arr.length
-  while i < max_length
-    if arr[i] == 0
-      arr.insert(i, 0)
-      i += 2
-    else
-      i += 1
-    end
-  end
-  arr.slice!(max_length, arr.length)
-end
+# def duplicate_zeros(arr)
+#   i = 0
+#   max_length = arr.length
+#   while i < max_length
+#     if arr[i] == 0
+#       arr.insert(i, 0)
+#       i += 2
+#     else
+#       i += 1
+#     end
+#   end
+#   arr.slice!(max_length, arr.length)
+# end
+
+# Remove Elements in Place algo.
+
+# def remove_element(nums, val)
+
+#   i = 0
+#   n = nums.length
+
+#   while i < n
+#        if nums[i] == val
+#            nums[i] = nums[n-1]
+#            n = n - 1
+#        else
+#            i += 1
+#        end
+#    end
+#    n
+# end

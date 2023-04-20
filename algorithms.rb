@@ -2491,3 +2491,20 @@
 #    end
 #    n
 # end
+
+# Sort the People.
+
+# def sort_people(names, heights)
+#   name_heights = {}
+
+#   i = 0
+#   while i < names.length
+#       name_heights[heights[i]] = names[i]
+#       i += 1
+#   end
+#   output = []
+#   name_heights.sort_by { |height, name| height }.reverse.each do |h, n|
+#       output << n
+#   end
+#   output
+# end

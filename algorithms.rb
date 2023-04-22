@@ -2508,3 +2508,23 @@
 #   end
 #   output
 # end
+
+# def watering_plants(plants, capacity)
+#   steps = 0
+#   i = 0
+#   current_capacity = capacity
+#   while i < plants.length
+#       plant = plants[i]
+#       if current_capacity >= plant
+#           current_capacity = current_capacity - plant
+#           steps += 1
+#       else
+#           steps += i
+#           steps += i + 1
+#           current_capacity = capacity
+#           current_capacity = current_capacity - plant
+#       end
+#       i += 1
+#   end
+#   steps
+# end

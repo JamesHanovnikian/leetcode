@@ -2529,50 +2529,61 @@
 #   steps
 # end
 
-def find_and_replace_pattern(words, pattern)
-  # Map? Looks like you can do some sort of Map.
-  # Need to loop through words array.
-  # check each letter words[i] to see if
+# def find_and_replace_pattern(words, pattern)
+#   # Map? Looks like you can do some sort of Map.
+#   # Need to loop through words array.
+#   # check each letter words[i] to see if
 
-  # create a hash map of pattern.
+#   # create a hash map of pattern.
 
-  # For the pattern, create hash map, if it doesn't exist in the hash map, then
-  # add one to the value so it's unique?'
-  # Loop through words, each letter needs to be same thing. if it matches
-  # {a => 1 b => 2 c => 3} break if it doesn't match with pattern_hash
-  # If we get to last iteration, output << words[i]
+#   # For the pattern, create hash map, if it doesn't exist in the hash map, then
+#   # add one to the value so it's unique?'
+#   # Loop through words, each letter needs to be same thing. if it matches
+#   # {a => 1 b => 2 c => 3} break if it doesn't match with pattern_hash
+#   # If we get to last iteration, output << words[i]
 
-  output = []
-  pattern_hash = {}
-  index = 1
-  pattern_array = []
-  pattern.chars().each do |l|
-    if pattern_hash[l] == nil
-      pattern_hash[l] = index
-      pattern_array << index
-      index += 1
-    elsif pattern_hash[l] != nil
-      pattern_array << pattern_hash[l]
-      index += 1
-    end
+#   output = []
+#   pattern_hash = {}
+#   index = 1
+#   pattern_array = []
+#   pattern.chars().each do |l|
+#     if pattern_hash[l] == nil
+#       pattern_hash[l] = index
+#       pattern_array << index
+#       index += 1
+#     elsif pattern_hash[l] != nil
+#       pattern_array << pattern_hash[l]
+#       index += 1
+#     end
+#   end
+#   words.each do |word|
+#     word_hash = {}
+#     word_array = []
+#     i = 0
+#     while i < word.length
+#       letter = word[i]
+#       if word_hash[letter] == nil
+#         word_hash[letter] = i + 1
+#         word_array << i + 1
+#       elsif word_hash[letter] != nil
+#         word_array << word_hash[letter]
+#       end
+#       i += 1
+#     end
+#     if word_array == pattern_array
+#       output << word
+#     end
+#   end
+#   output
+# end
+
+def is_same_after_reversals(num)
+  string_nums = num.to_s
+  if string_nums[string_nums.length - 1] != "0"
+    return true
+  elsif num == 0
+    return true
+  else
+    return false
   end
-  words.each do |word|
-    word_hash = {}
-    word_array = []
-    i = 0
-    while i < word.length
-      letter = word[i]
-      if word_hash[letter] == nil
-        word_hash[letter] = i + 1
-        word_array << i + 1
-      elsif word_hash[letter] != nil
-        word_array << word_hash[letter]
-      end
-      i += 1
-    end
-    if word_array == pattern_array
-      output << word
-    end
-  end
-  output
 end

@@ -2577,13 +2577,33 @@
 #   output
 # end
 
-def is_same_after_reversals(num)
-  string_nums = num.to_s
-  if string_nums[string_nums.length - 1] != "0"
-    return true
-  elsif num == 0
-    return true
-  else
-    return false
+# def is_same_after_reversals(num)
+#   string_nums = num.to_s
+#   if string_nums[string_nums.length - 1] != "0"
+#     return true
+#   elsif num == 0
+#     return true
+#   else
+#     return false
+#   end
+# end
+
+def count_pairs(nums, k)
+  nums_hash = {}
+  pairs = 0
+
+  nums.each_with_index do |num, index|
+    if nums_hash[num] == nil
+      nums_hash[num] = []
+      nums_hash[num] << index
+    else
+      nums_hash[num].each do |x|
+        if (x * index) % k == 0
+          pairs += 1
+        end
+      end
+      nums_hash[num] << index
+    end
   end
+  pairs
 end

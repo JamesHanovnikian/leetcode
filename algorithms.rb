@@ -2608,28 +2608,40 @@
 #   pairs
 # end
 
-def rearrange_array(nums)
-  # Divide the two arrays in Nums.
-  # create new array.
-  # alternate between to the two arrays pushing into.
-  i = 0
-  positive = []
-  negative = []
-  mod_array = []
-  while i < nums.length
-    if nums[i] > 0
-      positive << nums[i]
-    else
-      negative << nums[i]
-    end
-    i += 1
-  end
+# def rearrange_array(nums)
+#   # Divide the two arrays in Nums.
+#   # create new array.
+#   # alternate between to the two arrays pushing into.
+#   i = 0
+#   positive = []
+#   negative = []
+#   mod_array = []
+#   while i < nums.length
+#     if nums[i] > 0
+#       positive << nums[i]
+#     else
+#       negative << nums[i]
+#     end
+#     i += 1
+#   end
 
-  i = 0
-  while i < positive.length
-    mod_array << positive[i]
-    mod_array << negative[i]
-    i += 1
+#   i = 0
+#   while i < positive.length
+#     mod_array << positive[i]
+#     mod_array << negative[i]
+#     i += 1
+#   end
+#   mod_array
+# end
+
+def rearrange_array(nums)
+  nums = nums.partition { |num| num > 0 }
+  mod_array = []
+  i = 0 
+  while i < nums[0].length
+     mod_array << nums[0][i]
+     mod_array << nums[1][i]
+     i += 1
   end
-  mod_array
-end
+  mod_array 
+en

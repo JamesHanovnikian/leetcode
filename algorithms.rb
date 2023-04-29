@@ -2588,22 +2588,48 @@
 #   end
 # end
 
-def count_pairs(nums, k)
-  nums_hash = {}
-  pairs = 0
+# def count_pairs(nums, k)
+#   nums_hash = {}
+#   pairs = 0
 
-  nums.each_with_index do |num, index|
-    if nums_hash[num] == nil
-      nums_hash[num] = []
-      nums_hash[num] << index
+#   nums.each_with_index do |num, index|
+#     if nums_hash[num] == nil
+#       nums_hash[num] = []
+#       nums_hash[num] << index
+#     else
+#       nums_hash[num].each do |x|
+#         if (x * index) % k == 0
+#           pairs += 1
+#         end
+#       end
+#       nums_hash[num] << index
+#     end
+#   end
+#   pairs
+# end
+
+def rearrange_array(nums)
+  # Divide the two arrays in Nums.
+  # create new array.
+  # alternate between to the two arrays pushing into.
+  i = 0
+  positive = []
+  negative = []
+  mod_array = []
+  while i < nums.length
+    if nums[i] > 0
+      positive << nums[i]
     else
-      nums_hash[num].each do |x|
-        if (x * index) % k == 0
-          pairs += 1
-        end
-      end
-      nums_hash[num] << index
+      negative << nums[i]
     end
+    i += 1
   end
-  pairs
+
+  i = 0
+  while i < positive.length
+    mod_array << positive[i]
+    mod_array << negative[i]
+    i += 1
+  end
+  mod_array
 end

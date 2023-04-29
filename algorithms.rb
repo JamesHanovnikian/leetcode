@@ -2634,14 +2634,33 @@
 #   mod_array
 # end
 
-def rearrange_array(nums)
-  nums = nums.partition { |num| num > 0 }
-  mod_array = []
-  i = 0 
-  while i < nums[0].length
-     mod_array << nums[0][i]
-     mod_array << nums[1][i]
-     i += 1
-  end
-  mod_array 
-en
+# def rearrange_array(nums)
+#   nums = nums.partition { |num| num > 0 }
+#   mod_array = []
+#   i = 0
+#   while i < nums[0].length
+#      mod_array << nums[0][i]
+#      mod_array << nums[1][i]
+#      i += 1
+#   end
+#   mod_array
+# en
+
+# def balanced_string_split(s)
+#   i = 0
+#   balance = 0
+#   balanced_strings = 0
+#    while i < s.length
+#        current = s[i]
+#        if current == "R"
+#            balance = balance - 1
+#        elsif current == "L"
+#            balance += 1
+#        end
+#        if balance == 0
+#            balanced_strings += 1
+#        end
+#        i += 1
+#    end
+#    balanced_strings
+# end

@@ -2664,3 +2664,72 @@
 #    end
 #    balanced_strings
 # end
+
+# def count_points(rings)
+#   # Rods that have all three colors on them.
+#   # create a hash map. rod => colors colors is an array.
+#   # Loop through each pair in the array. ==> two variables?
+#   #if hash[rod] has all colors add one to output.
+
+#   output = 0
+#   hash = {}
+
+#   i = 0
+#   j = i + 1
+#   while j < rings.length
+#       color = rings[i]
+#       rod = rings[j]
+#       if hash[rod] == nil
+#           hash[rod] = []
+#       end
+#       hash[rod] << color
+#       i += 2
+#       j = i + 1
+#   end
+#  hash.each do |rod, color|
+#   if color.uniq.sort == ["B", "G", "R"]
+#       output += 1
+#   end
+#  end
+#  output
+# end
+
+#  def create_target_array(nums, index)
+#     i = 0
+#     target_array = []
+#     while i < nums.length
+#         if target_array.length == 0
+#             target_array << nums[i]
+#         else
+#             target_array.insert(index[i], nums[i])
+#         end
+
+#         i += 1
+#     end
+#     target_array
+# end
+
+
+def maximum_units(box_types, truck_size)
+  #  Find the maximum number of units that can be put on both. 
+
+  
+
+  box_types = box_types.sort_by { |x|  x[1] }.reverse 
+  total_boxes = 0 
+  total_units = 0 
+  box_types.each do |boxes, unit_size|
+      boxes.times do 
+          if total_boxes == truck_size 
+              break 
+          end
+          if total_boxes <= truck_size 
+              total_boxes += 1 
+              total_units = total_units + unit_size
+          else 
+              break  
+          end
+      end
+  end
+  total_units 
+end

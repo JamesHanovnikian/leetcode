@@ -2709,27 +2709,48 @@
 #     target_array
 # end
 
-
 def maximum_units(box_types, truck_size)
-  #  Find the maximum number of units that can be put on both. 
+  #  Find the maximum number of units that can be put on both.
 
-  
-
-  box_types = box_types.sort_by { |x|  x[1] }.reverse 
-  total_boxes = 0 
-  total_units = 0 
+  box_types = box_types.sort_by { |x| x[1] }.reverse
+  total_boxes = 0
+  total_units = 0
   box_types.each do |boxes, unit_size|
-      boxes.times do 
-          if total_boxes == truck_size 
-              break 
-          end
-          if total_boxes <= truck_size 
-              total_boxes += 1 
-              total_units = total_units + unit_size
-          else 
-              break  
-          end
+    boxes.times do
+      if total_boxes == truck_size
+        break
       end
+      if total_boxes <= truck_size
+        total_boxes += 1
+        total_units = total_units + unit_size
+      else
+        break
+      end
+    end
   end
-  total_units 
+  total_units
 end
+
+# def number_of_pairs(nums)
+#     # output is [pairs, leftover(Nums)]
+#     hash_counter = {}
+#     i = 0
+#     pairs = 0
+#     while i < nums.length
+#         if hash_counter[nums[i]] == nil
+#             hash_counter[nums[i]] = 0
+#         end
+#         hash_counter[nums[i]] += 1
+#         i += 1
+#     end
+#     remainder = 0
+#     hash_counter.each do |num, freq|
+#         if freq % 2 == 0
+#             pairs = pairs + freq / 2
+#         else
+#             pairs = pairs + freq / 2
+#             remainder = remainder + freq % 2
+#         end
+#     end
+#     [pairs, remainder]
+# end

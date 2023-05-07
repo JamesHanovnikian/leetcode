@@ -2756,3 +2756,14 @@
 # end
 
 # cheking
+
+def max_coins(piles)
+  piles.sort!
+  second_max_i = piles.length - 2
+  coins_collected = 0
+  while second_max_i >= piles.length / 3
+    coins_collected = coins_collected += piles[second_max_i]
+    second_max_i = second_max_i - 2
+  end
+  coins_collected
+end

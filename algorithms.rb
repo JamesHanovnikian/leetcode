@@ -2767,3 +2767,11 @@ def max_coins(piles)
   end
   coins_collected
 end
+
+def reverse_words(s)
+  new_s = ""
+  s.split(" ").map { |word| word.reverse }.each do |word|
+    new_s = new_s + " " + word
+  end
+  new_s.lstrip
+end

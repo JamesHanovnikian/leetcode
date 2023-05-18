@@ -2775,3 +2775,13 @@ def reverse_words(s)
   end
   new_s.lstrip
 end
+
+def restore_string(s, indices)
+  a = Array.new(s.length)
+  i = 0
+  while i < indices.length
+    a[indices[i]] = s[i]
+    i += 1
+  end
+  a.join
+end

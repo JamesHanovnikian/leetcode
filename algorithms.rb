@@ -2757,31 +2757,54 @@
 
 # cheking
 
-def max_coins(piles)
-  piles.sort!
-  second_max_i = piles.length - 2
-  coins_collected = 0
-  while second_max_i >= piles.length / 3
-    coins_collected = coins_collected += piles[second_max_i]
-    second_max_i = second_max_i - 2
-  end
-  coins_collected
-end
+# def max_coins(piles)
+#   piles.sort!
+#   second_max_i = piles.length - 2
+#   coins_collected = 0
+#   while second_max_i >= piles.length / 3
+#     coins_collected = coins_collected += piles[second_max_i]
+#     second_max_i = second_max_i - 2
+#   end
+#   coins_collected
+# end
 
-def reverse_words(s)
-  new_s = ""
-  s.split(" ").map { |word| word.reverse }.each do |word|
-    new_s = new_s + " " + word
-  end
-  new_s.lstrip
-end
+# def reverse_words(s)
+#   new_s = ""
+#   s.split(" ").map { |word| word.reverse }.each do |word|
+#     new_s = new_s + " " + word
+#   end
+#   new_s.lstrip
+# end
 
-def restore_string(s, indices)
-  a = Array.new(s.length)
+# def restore_string(s, indices)
+#   a = Array.new(s.length)
+#   i = 0
+#   while i < indices.length
+#     a[indices[i]] = s[i]
+#     i += 1
+#   end
+#   a.join
+# end
+
+def number_of_lines(widths, s)
+  # each line 100
+  # loop through widths, once you get to
+  lines = 1
+  current_line = 0
+  # if current_lines > 100
+  # lines += 1 && current_lines. =0
+
   i = 0
-  while i < indices.length
-    a[indices[i]] = s[i]
-    i += 1
+  while i < s.length
+    l = s[i]
+    width = widths[i]
+    if current_line + width <= 100
+      current_line = current_line + width
+      i += 1
+    else
+      lines += 1
+      current_line = 0
+    end
   end
-  a.join
+  [lines, current_line]
 end

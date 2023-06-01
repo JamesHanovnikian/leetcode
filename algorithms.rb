@@ -2808,3 +2808,24 @@ def number_of_lines(widths, s)
   end
   [lines, current_line]
 end
+
+# def repeated_substring_pattern(s)
+#   # start at beginning -
+#   # "abc"  from index 0, to index 0,1, al the way up to length
+#   # if s[index] * s
+
+#   length = s.length
+#   start = 0
+#   i = 1
+#   while i <= s.length/2
+#       substring = s.slice(start, i)
+#       diff = s.length / substring.length
+#       p substring
+#       if substring * diff == s
+#           return true
+#           break
+#       end
+#       i += 1
+#   end
+#   return false
+# end

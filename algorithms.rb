@@ -2829,3 +2829,8 @@ end
 #   end
 #   return false
 # end
+
+# def remove_duplicates(nums)
+#   nums.uniq!
+#   nums.count
+# end

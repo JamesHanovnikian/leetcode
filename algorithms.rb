@@ -2834,3 +2834,31 @@ end
 #   nums.uniq!
 #   nums.count
 # end
+
+def word_pattern(pattern, s)
+  # word pattern
+  # create a hash map with the pattern.
+  # { 0 => "a", 1 => "b", 2 => "b", 3 => "a"}
+  # split both strings.
+  #
+
+  checked = {}
+  alpha = ("a".."z").to_a
+  i = 0
+  string = ""
+  s.split(" ").each do |word|
+    if checked[word] == nil
+      checked[word] = alpha[i]
+      string = string + alpha[i]
+      i += 1
+    elsif checked[word] != nil
+      string = string + checked[word]
+    end
+  end
+
+  if string == pattern
+    return true
+  else
+    return false
+  end
+end

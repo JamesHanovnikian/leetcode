@@ -2876,3 +2876,27 @@ end
 #     end
 #     steps
 # end
+
+def final_prices(prices)
+  output = []
+  i = 0
+  while i < prices.length
+    j = i + 1
+    discount_applied = false
+    while j < prices.length
+      discount = 0
+      if prices[j] <= prices[i]
+        discount = prices[i] - prices[j]
+        output << discount
+        discount_applied = true
+        break
+      end
+      j += 1
+    end
+    if discount_applied == false
+      output << prices[i]
+    end
+    i += 1
+  end
+  output
+end

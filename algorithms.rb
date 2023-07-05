@@ -2901,7 +2901,42 @@ end
 #   output
 # end
 
-def minimized_string_length(s)
-  s = s.split("").uniq
-  s.length
+# def minimized_string_length(s)
+#   s = s.split("").uniq
+#   s.length
+# end
+
+def is_sum_equal(first_word, second_word, target_word)
+  range = ("a".."j").to_a
+  hash = {}
+  counter = 0
+  range.each do |l|
+    hash[l] = counter.to_s
+    counter += 1
+  end
+  i = 0
+  first_word_num = ""
+  second_word_num = ""
+  target_word_num = ""
+  while i < first_word.length
+    if first_word[i] != nil
+      first_word_num = first_word_num + hash[first_word[i]]
+    end
+
+    if second_word[i] != nil
+      second_word_num = second_word_num + hash[second_word[i]]
+    end
+
+    if target_word[i] != nil
+      target_word_num = target_word_num + hash[target_word[i]]
+    end
+
+    i += 1
+  end
+
+  if first_word_num.to_i + second_word_num.to_i == target_word_num.to_i
+    return true
+  else
+    return false
+  end
 end

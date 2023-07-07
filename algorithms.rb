@@ -2930,13 +2930,30 @@ def is_sum_equal(first_word, second_word, target_word)
     if target_word[i] != nil
       target_word_num = target_word_num + hash[target_word[i]]
     end
-
     i += 1
   end
-
   if first_word_num.to_i + second_word_num.to_i == target_word_num.to_i
     return true
   else
     return false
   end
+end
+
+def sum_zero(n)
+  array = (1..n).to_a
+  counter = 1
+  x = 0
+  y = array.length - 1
+  while x < y
+    array[x] = counter
+    array[y] = counter * -1
+    counter += 1
+    x += 1
+    y = y - 1
+  end
+  if n % 2 != 0
+    middle = n / 2
+    array[middle] = 0
+  end
+  array
 end

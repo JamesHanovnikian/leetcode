@@ -2939,21 +2939,63 @@ def is_sum_equal(first_word, second_word, target_word)
   end
 end
 
-def sum_zero(n)
-  array = (1..n).to_a
-  counter = 1
-  x = 0
-  y = array.length - 1
-  while x < y
-    array[x] = counter
-    array[y] = counter * -1
-    counter += 1
-    x += 1
-    y = y - 1
-  end
-  if n % 2 != 0
-    middle = n / 2
-    array[middle] = 0
-  end
-  array
-end
+# def sum_zero(n)
+#   array = (1..n).to_a
+#   counter = 1
+#   x = 0
+#   y = array.length - 1
+#   while x < y
+#     array[x] = counter
+#     array[y] = counter * -1
+#     counter += 1
+#     x += 1
+#     y = y - 1
+#   end
+#   if n % 2 != 0
+#     middle = n / 2
+#     array[middle] = 0
+#   end
+#   array
+# end
+
+# def decrypt(code, k)
+#   # Numbers wrap around.
+#   # circular array.
+#   decrypted_array = []
+#   n = code.size
+#   if k == 0
+#       i = 0
+#       while i < n
+#           decrypted_array << 0
+#           i += 1
+#       end
+#   elsif k > 0
+#       i = 0
+
+#       while i < code.length
+#           finish = i + 1 + k
+#           j = i + 1
+#           sum = 0
+#           while j < finish
+#               sum = sum + code[j % n]
+#               j += 1
+#           end
+#           decrypted_array << sum
+#           i += 1
+#       end
+#   elsif k < 0
+#       i = 0
+#       while i < code.length
+#           dist = k.abs
+#           j = i - 1
+#           sum = 0
+#           dist.times do
+#               sum = sum + code[j % n]
+#               j = j - 1
+#           end
+#           decrypted_array << sum
+#           i += 1
+#       end
+#   end
+#   decrypted_array
+# end

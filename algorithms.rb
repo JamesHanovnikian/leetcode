@@ -2999,3 +2999,18 @@ end
 #   end
 #   decrypted_array
 # end
+
+def min_moves_to_seat(seats, students)
+    # sort both seats and students. 
+    # 
+    moves = 0 
+    seats.sort! 
+    students.sort! 
+    i = 0 
+    while i < seats.length 
+        diff = students[i] - seats[i]
+        moves += diff.abs() 
+        i += 1 
+    end
+    return moves 
+end

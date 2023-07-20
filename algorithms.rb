@@ -3001,16 +3001,34 @@ end
 # end
 
 def min_moves_to_seat(seats, students)
-    # sort both seats and students. 
-    # 
-    moves = 0 
-    seats.sort! 
-    students.sort! 
-    i = 0 
-    while i < seats.length 
-        diff = students[i] - seats[i]
-        moves += diff.abs() 
-        i += 1 
+  # sort both seats and students.
+  #
+  moves = 0
+  seats.sort!
+  students.sort!
+  i = 0
+  while i < seats.length
+    diff = students[i] - seats[i]
+    moves += diff.abs()
+    i += 1
+  end
+  return moves
+end
+
+def count_matches(items, rule_key, rule_value)
+  checker = 0
+  matches = 0
+  if rule_key == "color"
+    checker = 1
+  elsif rule_key == "type"
+    checker = 0
+  elsif rule_key == "name"
+    checker = 2
+  end
+  items.each do |item|
+    if item[checker] == rule_value
+      matches += 1
     end
-    return moves 
+  end
+  matches
 end

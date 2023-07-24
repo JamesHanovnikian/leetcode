@@ -3054,3 +3054,19 @@ end
 #         i += 1
 #     end
 # end
+
+def maximum_number_of_string_pairs(words)
+  i = 0 
+  pairs = 0
+  while i < words.length 
+      j = i + 1
+      while j < words.length 
+          if words[i] == words[j].reverse
+              pairs += 1
+          end
+          j += 1
+      end
+      i += 1
+  end
+  pairs 
+end

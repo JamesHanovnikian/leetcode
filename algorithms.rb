@@ -3055,18 +3055,42 @@ end
 #     end
 # end
 
-def maximum_number_of_string_pairs(words)
-  i = 0 
-  pairs = 0
-  while i < words.length 
-      j = i + 1
-      while j < words.length 
-          if words[i] == words[j].reverse
-              pairs += 1
-          end
-          j += 1
-      end
-      i += 1
-  end
-  pairs 
+# def maximum_number_of_string_pairs(words)
+#   i = 0
+#   pairs = 0
+#   while i < words.length
+#       j = i + 1
+#       while j < words.length
+#           if words[i] == words[j].reverse
+#               pairs += 1
+#           end
+#           j += 1
+#       end
+#       i += 1
+#   end
+#   pairs
+# end
+
+
+def can_place_flowers(flowerbed, n)
+    # two - pointer 
+    # iterate through the array. 
+    # check the index ahead and behind. 
+    # if they equal 0 then, --> r
+    i = 0 
+    count = 0 
+
+    while i < flowerbed.length 
+        if flowerbed[i] == 0 
+            empty_left_plot = (i == 0) || flowerbed[i - 1] == 0
+            empty_right_plot = (i == flowerbed.length-1) || flowerbed[i + 1] == 0 
+        end
+         
+        if empty_left_plot && empty_right_plot 
+            flowerbed[i] = 1 
+            count += 1
+        end
+        i += 1
+    end
+    return count >= n 
 end

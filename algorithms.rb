@@ -3071,26 +3071,52 @@ end
 #   pairs
 # end
 
-
 def can_place_flowers(flowerbed, n)
-    # two - pointer 
-    # iterate through the array. 
-    # check the index ahead and behind. 
-    # if they equal 0 then, --> r
-    i = 0 
-    count = 0 
+  # two - pointer
+  # iterate through the array.
+  # check the index ahead and behind.
+  # if they equal 0 then, --> r
+  i = 0
+  count = 0
 
-    while i < flowerbed.length 
-        if flowerbed[i] == 0 
-            empty_left_plot = (i == 0) || flowerbed[i - 1] == 0
-            empty_right_plot = (i == flowerbed.length-1) || flowerbed[i + 1] == 0 
-        end
-         
-        if empty_left_plot && empty_right_plot 
-            flowerbed[i] = 1 
-            count += 1
-        end
-        i += 1
+  while i < flowerbed.length
+    if flowerbed[i] == 0
+      empty_left_plot = (i == 0) || flowerbed[i - 1] == 0
+      empty_right_plot = (i == flowerbed.length - 1) || flowerbed[i + 1] == 0
     end
-    return count >= n 
+
+    if empty_left_plot && empty_right_plot
+      flowerbed[i] = 1
+      count += 1
+    end
+    i += 1
+  end
+  return count >= n
+end
+
+def count_consistent_strings(allowed, words)
+  # hash- map
+  # consistent_chars = 0
+  #
+  consistent_chars = 0
+  allowed_hash = {}
+  i = 0
+  while i < allowed.length
+    if allowed_hash[allowed[i]] == nil
+      allowed_hash[allowed[i]] = "checked"
+    end
+    i += 1
+  end
+  words.each do |word|
+    is_consistent = true
+    word.split("").uniq.each do |letter|
+      if allowed_hash[letter] == nil
+        is_consistent = false
+      end
+    end
+    if is_consistent == true
+      consistent_chars += 1
+    end
+  end
+  consistent_chars
 end

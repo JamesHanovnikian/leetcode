@@ -3121,14 +3121,31 @@ def count_consistent_strings(allowed, words)
   consistent_chars
 end
 
-
 def count_digits(num)
-  string_num = num.to_s 
-  output = 0 
+  string_num = num.to_s
+  output = 0
   string_num.split("").each do |s|
-      if num % s.to_i == 0 
-          output += 1
-      end
+    if num % s.to_i == 0
+      output += 1
+    end
   end
-  output 
+  output
 end
+
+# def array_strings_are_equal(word1, word2)
+#   word_one = ""
+#   word_two = ""
+#   word1.each do |word|
+#       word_one = word_one + word
+#   end
+
+#   word2.each do |word|
+#       word_two = word_two + word
+#   end
+
+#   if word_one == word_two
+#       return true
+#   else
+#       return false
+#   end
+# end

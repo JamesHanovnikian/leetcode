@@ -3120,3 +3120,15 @@ def count_consistent_strings(allowed, words)
   end
   consistent_chars
 end
+
+
+def count_digits(num)
+  string_num = num.to_s 
+  output = 0 
+  string_num.split("").each do |s|
+      if num % s.to_i == 0 
+          output += 1
+      end
+  end
+  output 
+end

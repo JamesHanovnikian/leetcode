@@ -3162,36 +3162,48 @@ end
 #   end
 # end
 
-def closestNumbers(arr)
-  arr.sort!
-  #  sort the arrat.
-  # two pointers, loop through and find the lowest diff.
-  # go back and thru again, and put all of them in an array?
-  #
+# def closestNumbers(arr)
+#   arr.sort!
+#   #  sort the arrat.
+#   # two pointers, loop through and find the lowest diff.
+#   # go back and thru again, and put all of them in an array?
+#   #
+#   output = []
+
+#   x = 0
+#   y = x + 1
+
+#   current_min = 100000
+#   while y < arr.length
+#     diff = arr[y] - arr[x]
+#     if diff < current_min
+#       current_min = diff
+#     end
+#     x += 1
+#     y = x + 1
+#   end
+
+#   x = 0
+#   y = x + 1
+#   while y < arr.length
+#     if arr[y] - arr[x] == current_min
+#       output << arr[x]
+#       output << arr[y]
+#     end
+#     x += 1
+#     y = x + 1
+#   end
+#   output
+# end
+
+def divide_string(s, k, fill)
   output = []
-
-  x = 0
-  y = x + 1
-
-  current_min = 100000
-  while y < arr.length
-    diff = arr[y] - arr[x]
-    if diff < current_min
-      current_min = diff
-    end
-    x += 1
-    y = x + 1
+  remainder = s.length % k
+  s.split("").each_slice(k) { |a| output << a.join }
+  if remainder == 0
+    return output
+  else
+    output[-1] = output[-1] + (fill * (k - remainder))
+    return output
   end
-
-  x = 0
-  y = x + 1
-  while y < arr.length
-    if arr[y] - arr[x] == current_min
-      output << arr[x]
-      output << arr[y]
-    end
-    x += 1
-    y = x + 1
-  end
-  output
 end
